@@ -80,7 +80,8 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+# This repo is using the generated files.
+# dist
 
 # Gatsby files
 .cache/
