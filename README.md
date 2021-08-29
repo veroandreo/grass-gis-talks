@@ -1,6 +1,6 @@
 # GRASS GIS Talks
 
-* Wageningen 2021: [New Major Release of GRASS GIS](https://veroandreo.github.io/grass-gis-talks/wageningen2021.html)
+* Open Data Science Europe - Wageningen 2021: [New Major Release of GRASS GIS](https://veroandreo.github.io/grass-gis-talks/wageningen2021.html)
 
 ## Authors, Copyright, and License
 
