@@ -247,19 +247,30 @@ No increase in license fees over time.
 
 
 <section>
-    <h2>GRASS GIS 8.0.0</h2>
+    <h2>GRASS GIS 8</h2>
     <ul>
         <li>Roadmap:
             <ul>
-                <li>7.8.6 Fall 2021</li>
-                <li>8.0.0 Fall 2021
+                <li>7.8.6 Fall 2021
                     <ul>
-                        <li>Presented here</li>
-                        <li>PROJ 6.0.0, 7.0.0 (and above) support</li>
+                        <li>Old but still good.</li>
                     </ul>
                 </li>
-                <li>8.0.1 Winter 2021</li>
-                <li>8.2 Spring 2022</li>
+                <li>8.0.0 Fall 2021
+                    <ul>
+                        <li>First release in a new era.</li>
+                    </ul>
+                </li>
+                <li>8.0.1 Winter 2021
+                    <ul>
+                        <li>What did we miss?</li>
+                    </ul>
+                </li>
+                <li>8.2.0 Spring 2022
+                    <ul>
+                        <li>Enjoy the GSoC 2021 results!</li>
+                    </ul>
+                </li>
             </ul>
         </li>
     </ul>
@@ -297,6 +308,7 @@ No increase in license fees over time.
     <p>by Linda Kladivova, Anna Petrasova, Vaclav Petras
 </section>
 
+
 <section>
     <h2>Skeletons and Centerlines</h2>
     <em>v.voronoi</em> tool can now create area skeletons and centerlines.
@@ -311,7 +323,7 @@ No increase in license fees over time.
     <br>
     <small>(2-5&times; faster, or almost no time for some workflows)</small>
     <br>
-    <img src="img/r_external_futures.png" class="stretch">
+    <img src="img/r_external.png" class="stretch">
     <p>by Markus Metz</p>
     <p>Great for workflows when only portion of the data is processed in GRASS GIS.</p>
 </section>
@@ -356,6 +368,20 @@ No increase in license fees over time.
     <img src="img/i_gabor_segment.png" width="45%">
     <p>by Owen Smith</p>
 </section>
+          
+          
+<section>
+    <h2>Raster band references and portable signature files</h2>
+    <ul>
+        <li>assign a band reference (semantic label) to any raster map</li>
+        <li>extended metadata for band reference</li>
+        <li>band references stored in classification signature files</li>
+        <li>signature files can be used for classification if band references match (raster values are semantically equal)</li>
+    </ul>
+    <br>
+    <img src="img/band_references_scheme.png" class="stretch">
+    <p>by Māris Nartišs and Martin Landa</p>
+</section>
 
 
 <section>
@@ -369,15 +395,19 @@ No increase in license fees over time.
 </section>
 
 
-<!--
 <section>
     <h2>Code Quality</h2>
-    <img src="img/dark_theme_v_clip.png" class="stretch">
-    <p>by Nicklas Larsson
+    <ul>
+        <li>Python code formatted by Black.</li>
+        <li>Python code checked against Flake8.</li>
+        <li>Most of warnings in C code removed and now checked.</li>
+        <li>Code tested with CodeQL.</li>
+        <li>Flake8 and Black checks also for Addons.</li>
+    </ul>
+    <img src="img/code_in_vscodium.png" class="stretch">
+    <p>by Nicklas Larsson, Vaclav Petras, Anna Petrasova, Carmen Tawalika, ...
 </section>
 
-PROJ
--->
 
 <section>
     <h2>Support</h2>
@@ -405,15 +435,15 @@ PROJ
 <section>
     <h2>FUTURES</h2>
     <p><em>r.futures</em> - set of tools for urban growth modeling</p>
-    <img src="img/FUTURES_Raleigh.png" class="stretch">
+    <p>Improved scalability, new validation modules</p>
+    <img src="img/FUTURES_addon.png" class="stretch">
     <p>by NC State Center for Geospatial Analytics</p>
-    <p>
-        See poster:
-        <br>
-        <em>FUTURES v2: Urban Growth Modeling at Scale</em>
-        <br>
-        Thursday, 5pm
-    </p>
+
+    <aside class="notes">
+        r.futures is a set of modules for urban growth modeling
+        based on historical landcover and population data.
+        New version is more scalable and includes validation modules.
+    </aside>
 </section>
 
 
@@ -464,6 +494,62 @@ PROJ
             Veronica&nbsp;Andreo (CONICET), &hellip;
         </small>
     </p>
+</section>
+
+<section>
+    <h2>Google Summer of Code 2021</h2>
+    <h3>OpenMP parallelization by Aaron Saw Min Sern</h3>
+    <div class="container">
+        <div class="col">
+        <ul>
+            <li>r.series</li>
+            <li>r.univar</li>
+            <li>r.neighbors</li>
+            <li>r.patch</li>
+            <li>r.resamp.interp</li>
+            <li>r.resamp.filter</li>
+            <li>r.mfilter</li>
+            <li>r.slope.aspect</li>
+        </ul>
+        <p> + benchmarking library</p>
+        </div>
+        <div class="col">
+        <img src="img/gsoc/openmp.png">
+        </div>
+    </div>
+    <p>Coming in 8.2</p>
+    <aside class="notes">
+        <ul>
+            <li>Parallelization of multiple, often used raster modules, with benchmarks.</li>
+            <li>Especially useful for big data processing</li>
+            <li>Can work on all platforms, providing GRASS is compiled with OpenMP</li>
+        </ul>
+    </aside>
+</section>
+<section>
+    <h2>Google Summer of Code 2021</h2>
+    <h3>Single-Window GUI by Linda Kladivova</h3>
+    <img src="img/gsoc/proposal3.png" class="stretch">
+    <p>
+    Code refactoring to enable Single-Window GUI with dockable widgets.
+    </p>
+    <p>Coming in 8.2</p>
+</section>
+<section>
+    <h2>Google Summer of Code 2021</h2>
+    <h3>Integration of GRASS GIS and Jupyter Notebooks by Caitlin Haedrich</h3>
+    <img src="img/gsoc/InteractiveVectorMaps.PNG" class="stretch">
+    <p>
+    New Python library, that simplifies the launch of GRASS GIS in Jupyter and displaying raster/vector data.
+    </p>
+    <aside class="notes">
+        <ul>
+            <li>Simpler GRASS GIS initialization</li>
+            <li>More intuitive API for rendering</li>
+            <li>Classic rendering with d.* commands, rendering with webmap and zooming, also 3D rendering</li>
+            <li>Available now as experimental, coming in 8.2 officially</li>
+        </ul>
+    </aside>
 </section>
 
 
