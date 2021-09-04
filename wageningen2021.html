@@ -8,7 +8,7 @@
         <title>GRASS GIS 8: From Desktop to Big Data Cubes</title>
 
         <meta name="description" content="GRASS GIS talk slides for Geo-harmonizer Workshop 2021 in Wageningen">
-        <meta name="author" content="Veronica Andreo, Vaclav Petras, Martin Landa, Anna Petrasova, Maris Natiss, Huidae Cho, Moritz Lennert and Markus Neteler">
+        <meta name="author" content="Veronica Andreo, Vaclav Petras, Martin Landa, Anna Petrasova, Guido Riembauer, Māris Nartišs, Moritz Lennert, Markus Metz, Huidae Cho and Markus Neteler">
 
         <link rel="stylesheet" href="dist/reset.css">
         <link rel="stylesheet" href="dist/reveal.css">
@@ -310,7 +310,7 @@
     </ul>
     <br>
     <img src="img/grass_team.jpg" class="stretch">
-    <p><em>Credit goes to the whole community, not just this talk's authors.</em></p>
+    <p><em>Credit goes to the whole community, not just this talk's authors</em></p>
 </section>
 
 <section>
@@ -337,24 +337,6 @@
     <a href="https://scholar.google.com/citations?user=gJ0ZB0cAAAAJ">GRASS GIS google scholar profile</a>
 </section>
 
-<!--
-<section>
-    <h2>Return of Investment</h2>
-    <ul>
-        <li>Emphasis on backwards compatibility</li>
-        <li>No increasing license fees over time</li>
-        <li>Employer-independent</li>
-        <li>Contractor-independent</li>
-    </ul>
-    <br>
-    <img src="img/modeler_skyview.png" class="stretch">
-<aside class="notes">
-Old commands, often work in new versions with minimal changes.
-No increase in license fees over time.
-</aside>
-</section>
--->
-
 <section>
     <h2>Innovation with stability</h2>
     <ul>
@@ -370,6 +352,27 @@ No increase in license fees over time.
         if((elevation - fill) &lt; 0, 1, 0)
     </code>
     </p>
+</section>
+
+<section>
+    <h2>Support</h2>
+    <ul>
+        <li>Community support
+            <ul>
+                <li><a href="https://lists.osgeo.org/mailman/listinfo/grass-user">user mailing list</a> <small>(with vast archives since 1991)</small>
+                <li><a href="https://gis.stackexchange.com/questions/tagged/grass">GIS StackExchange</a>
+                <li>&hellip;
+            </ul>
+        <li>Commercial support
+        <ul>
+            <li><a href="https://www.mundialis.de/en/open-source-gis/">mundialis</a>
+            <li><a href="https://www.northrivergeographic.com/">North River Geographic Systems</a>
+            <li><a href="https://geospatial.ncsu.edu/engage/service-center/">Center for Geospatial Analytics, NC State University</a>
+            <li>&hellip;
+        </ul>
+    </ul>
+    <br>
+    <img src="img/grass_gis.svg" alt="GRASS GIS logo" class="stretch">
 </section>
 
 </section>
@@ -406,6 +409,11 @@ No increase in license fees over time.
     </ul>
     <br>
     <img src="img/splash_screen.png" class="stretch">
+</section>
+
+<section>
+    <h1>Exciting new features in GRASS 8</h1>
+    <i class="fa fa-rocket fa-4x"></i>
 </section>
 
 <section>
@@ -505,7 +513,7 @@ No increase in license fees over time.
 </section>
 
 <section>
-    <h2>Code Quality</h2>
+    <h2>Improved and robust code quality checks</h2>
     <ul>
         <li>Python code formatted by Black.</li>
         <li>Python code checked against Flake8.</li>
@@ -606,11 +614,15 @@ No increase in license fees over time.
 </section>
 
 <section>
-    <h2>Addon by Paulo</h2>
+    <h2>Ecological applications: r.suitability.regions</h2>
+    <img src="https://ecodiv.earth/TutorialsNotes/SuitabilityRegions/images/suit002.png" class="stretch">
+    <p>by Paulo van Breugel</p>
 </section>
 
 <section>
-    <h2>Addon by Charlotte and Tais</h2>
+    <h2>Weighted layers for dasymetric mapping</h2>
+    <img src="img/r.area.createweight_out.png" class="stretch">
+    <p>by Charlotte Flasse, Tais Grippa and Safa Fennia. <a href="https://doi.org/10.5194/isprs-archives-XLVI-4-W2-2021-55-2021">DOI.</a></p>
 </section>
 
 <section>
@@ -760,10 +772,11 @@ No increase in license fees over time.
 </section>
 
 
-<section id="GRASS ready for the cloud">
+<section id="GRASS is ready for the cloud">
 
 <section>
-    <h1>GRASS ready for the cloud</h1>
+    <h1>GRASS is ready for the cloud</h1>
+    <img src="img/grass_in_the_clouds.png" width="50%">
 </section>
 
 <section>
@@ -846,28 +859,6 @@ No increase in license fees over time.
 
 
 <section>
-    <h2>Support</h2>
-    <ul>
-        <li>Community support
-            <ul>
-                <li><a href="https://lists.osgeo.org/mailman/listinfo/grass-user">user mailing list</a> <small>(with vast archives since 1991)</small>
-                <li><a href="https://gis.stackexchange.com/questions/tagged/grass">GIS StackExchange</a>
-                <li>&hellip;
-            </ul>
-        <li>Commercial support
-            <ul>
-                <li><a href="https://www.mundialis.de/en/open-source-gis/">mundialis</a>
-                <li><a href="https://www.northrivergeographic.com/">North River Geographic Systems</a>
-                <li><a href="https://geospatial.ncsu.edu/engage/service-center/">Center for Geospatial Analytics, NC State University</a>
-                <li>&hellip;
-            </ul>
-    </ul>
-    <br>
-    <img src="img/grass_gis.svg" alt="GRASS GIS logo" class="stretch">
-</section>
-
-
-<section>
 <h2>Resources</h2>
 <!--diversify the list-->
 <ul>
@@ -912,20 +903,33 @@ No increase in license fees over time.
 
 <section id="Get involved">
 <section>
-    <h1>You can contribute!! Get involved!</h1>
+    <h1>Get involved! All contributions are welcome!</h1>
+    <img src="https://grass.osgeo.org/images/news/grass_sprint2018_bonn_fotowall_medium.jpg" class="stretch">
 </section>
 
 <section>
-    <h2>GitHub-centered Software Development</h2>
+    <h2>Code contributions</h2>
+    <br>
+    <h3>GRASS GIS development is GitHub-centered: core, addons, website</h3>
     <ul>
-        <li>"Fork me on GitHub"</li>
-        <li>Filling out issues (tickets) requires only GitHub login.</li>
-        <li>All issues are publicly visible.</li>
+        <li>File bug reports or feature requests</li>
+        <li>All issues and PR's are publicly visible</li>
+        <li>Ask, comment, suggest also in Github <a href="https://github.com/OSGeo/grass/discussions">Discussions</a></li>
+        <li><em>"Fork me on <a href="https://github.com/OSGeo/grass">GitHub</a>"</em> and suggest changes or fix bugs via pull requests</li>
+        <li>Create your own addon!</li>
     </ul>
     <img src="img/octocat.png" class="stretch">
 </section>
 
-<!-- Add slide with other possible contributions: Translations, Documentation, create your add-on, contribute to GRASS core via PR-->
+<section>
+    <h2>Other contributions are relevant too!</h2>
+    <ul>
+        <li>Translation: we use <a href="https://www.transifex.com/grass-gis/">Transifex</a></li>
+        <li>Documentation: start by fixing typos in manual pages, add examples where missing, create cool screenshots, write tutorials in the wiki, etc.</li>
+        <li>Contribute material for social media</li>
+        <li>Bring your own ideas!</li>
+    </ul>
+</section>
 
 <section>
     <h2>Sponsoring</h2>
@@ -960,6 +964,12 @@ No increase in license fees over time.
     <a href="https://opencollective.com/grass">https://opencollective.com/grass</a></p>
 </section>
 
+</section>
+
+
+<section>
+    <h2>Meet the GRASS team at FOSS4G!</h2>
+<!--    Needs links and logo - TBD-->
 </section>
 
 
