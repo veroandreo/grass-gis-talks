@@ -43,6 +43,9 @@ body {
   line-height: 1em;
   font-weight: inherit; }
 
+.container_flex {
+    display: flex;
+    grid-auto-flow: column; }
 /*********************************************
  * HEADERS
  *********************************************/
