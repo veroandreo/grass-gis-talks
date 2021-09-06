@@ -255,10 +255,12 @@
 
 <section>
     <h1>Cool stuff that has been there for a while...</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Noto_Emoji_Pie_1f60e.svg/512px-Noto_Emoji_Pie_1f60e.svg.png" width="30%">
 </section>
 
 <section>
-    <h2>64-bit and large files support in all OS's</h2>
+    <h2>64-bit and large file support in all Operative Systems</h2>
+    <img src="img/big_files.jpg" class="stretch">
 </section>
 
 <section>
@@ -361,6 +363,7 @@
             <ul>
                 <li><a href="https://lists.osgeo.org/mailman/listinfo/grass-user">user mailing list</a> <small>(with vast archives since 1991)</small>
                 <li><a href="https://gis.stackexchange.com/questions/tagged/grass">GIS StackExchange</a>
+                <li><a href="https://github.com/OSGeo/grass/discussions">Discussions</a> on GitHub</li>
                 <li>&hellip;
             </ul>
         <li>Commercial support
@@ -635,7 +638,31 @@
 </section>
 
 <section>
-    <h2>Addons by Stefan</h2>
+    <h2>Tap directly into FAIR data warehouses</h2>
+    <h4>GRASS GIS understands netCDF data that follows the CF-convention</h4>
+    <div class="container_flex">
+        <div class="column">
+            <small>
+                <ul>
+                    <li><b>m.crawl.thredds</b>: Lists URLs for netCDF datasets on Thredds servers</li>
+                    <li><b>t.rast.import.netcdf</b>: Makes Spatio-temporal data in netCDF format directly available for analysis in GRASS STRDS (also without downloading)</li>
+                </ul>
+            </small>
+        </div>
+        <div class="column">
+            <img src="img/netcdf_screenshot.jpg" width=100%>
+        </div>
+    </div>
+    <br>
+    <p>
+        <small>
+            Enjoy data delivered right into your GRASS GIS database from e.g.:
+        </small>
+        <img src="img/netcdf_sources.png" width=100% class="stretch">
+    </p>
+    <p><small>
+        by Stefan&nbsp;Blumentrath (Norwegian Institute for Nature Research (NINA)) &hellip;
+    </small></p>
 </section>
 
 </section>
@@ -742,7 +769,7 @@
 <section>
     <h2>Preprocessing</h2>
     <ul>
-        <li><b><em>i.sentinel.mask</li>
+        <b><em><li>i.sentinel.mask</li>
         <li>t.sentinel.mask</li>
         <li>i.sentinel.preproc</li>
         <li>i.sentinel-2.sen2cor</li>
@@ -819,25 +846,25 @@
 
 <section>
     <h1>Application examples</h1>
+    <h2>GRASS for remote sensing analysis in the cloud</h2>
 </section>
 
 <section>
-    <h2>Applications</h2>
-    <h4>Nationwide land-cover mapping</h4>
+    <h2>Germany land-cover mapping based on Sentinel-2 data</h2>
     <h6>GRASS modules in use (excerpt):</h6>
     <ul>
-        <font size="3"><li><b><em>i.vi</li>
+        <b><em><font size="3"><li>i.vi</li>
             <li>t.rast.series</li>
             <li>r.learn.ml2</li>
             <li>r.change.info</li></font></b></em>
     </ul>
     <br>
-    <img src="img/incora_germany_2019_incl_subset.png" class="stretch">
+    <img src="img/incora_germany_2019_incl_subset.png" class="stretch"><br>
+    <small>For details, follow <a href="https://www.mundialis.de/en/deutschland-2020-landbedeckung-auf-basis-von-sentinel-2-daten/">this</a> blog post.</small>
 </section>
 
 <section>
-    <h2>Applications</h2>
-    <h4>Forest monitoring</h4>
+    <h2>Forest monitoring</h2>
     <h6>GRASS modules in use (excerpt):</h6>
     <ul>
         <font size="3"><li><b><em>r.mapcalc</li>
@@ -850,8 +877,7 @@
 </section>
 
 <section>
-    <h2>Applications</h2>
-    <h4>Flood Mapping</h4>
+    <h2>Flood Mapping in Ecuador based on Sentinel-1 data</h2>
     <h6>GRASS modules in use (excerpt):</h6>
     <ul>
         <font size="3"><li><b><em>r.mapcalc</li>
@@ -861,6 +887,7 @@
     </ul>
     <br>
     <img src="img/s1_flood_example.jpg" width="50%"><img src="img/s1_flood_frequency.jpg" width="50%">
+    <small>For details, follow <a href="https://www.mundialis.de/en/sendai-flood-mapping-in-ecuador-based-on-sentinel-1-data/">this</a> blog post.</small>
 </section>
 
 </section>
@@ -970,7 +997,8 @@
 </section>
 
 
-<section>
+<section data-background-image="https://pbs.twimg.com/media/E-MBdOYWUAML1W4?format=jpg&name=large" data-background-opacity="0.9">
+    <div class="message-box-white">
     <h2>Meet the GRASS team at <a href="https://2021.foss4g.org/">FOSS4G</a> by the end of the month!</h2>
     <br>
     <p>Have a look at the amazing list of <a href="https://2021.foss4g.org/schedule/workhops.html">workshops</a>
@@ -979,22 +1007,20 @@
     <br>
     <p>You can also join us at the <a href="https://wiki.osgeo.org/wiki/FOSS4G_2021/Community_sprint">code sprint</a>!
     <br><br>
-    <img src="https://registration.2021.foss4g.org/media/pub/thumbs/fccad5b3f7e82c69e51a33ac42bdd536.5000x120.png" width="45%">
+    <img src="img/grass_gis.svg" width="15%"> <img src="https://registration.2021.foss4g.org/media/pub/thumbs/fccad5b3f7e82c69e51a33ac42bdd536.5000x120.png" width="45%">
+    </div>
 </section>
 
 
 <section>
-    <h1>Thank you for your attention!</h1>
+    <h1>Thanks for your attention!!</h1>
+    <br>
+    <img src="img/grass_gis.svg" alt="GRASS GIS logo" width="20%">
+    <p><a href="https://grass.osgeo.org/">grass.osgeo.org</a></p>
 
-    <img src="img/grass_gis.svg" alt="GRASS GIS logo" width="25%">
-    <p>
-        <a href="https://grass.osgeo.org/">grass.osgeo.org</a>
-    <p>
-        <a href="https://twitter.com/VeronicaAndreo"><i class="fa fa-twitter"></i> VeronicaAndreo</a>
-    </p>
-    <p>
-        <a href="https://veroandreo.github.io/grass-gis-talks/wageningen2021.html">veroandreo.github.io/grass-gis-talks</a>
-
+    <br>
+    <a href="https://twitter.com/VeronicaAndreo"><i class="fa fa-twitter"></i> VeronicaAndreo</a><br>
+    <a href="https://veroandreo.gitlab.io/"><i class="fa fa-globe"></i> veroandreo.gitlab.io</a>
 </section>
 
             </div>
