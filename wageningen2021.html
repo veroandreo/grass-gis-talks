@@ -171,9 +171,10 @@
     <textarea data-template>
     # Overview
         - Which GRASS?
-        - GRASS GIS 8
-        - GRASS for Remote Sensing
-        - GRASS ready for Big Remote Sensing Data
+        - What's new in GRASS GIS 8?
+        - GRASS loves Remote Sensing
+        - GRASS ready for the cloud
+        - Application examples
         - Resources
         - Get involved
     </textarea>
@@ -265,7 +266,12 @@
 
 <section>
     <h2>Time series support</h2>
-    <img src="img/tgrass_flowchart.png" class="stretch">
+    <div class="r-stack">
+        <img class="fragment" src="img/tgrass_flowchart.png" width="70%">
+        <img class="fragment" src="img/tplot.png" width="70%">
+        <img class="fragment" src="https://gitlab.com/veroandreo/grass-gis-conae/-/raw/master/assets/img/3month_lst_anim_small.gif" width="70%">
+    </div>
+    <p>by S&ouml;ren Gebbert, Luca Delucchi, Anna Petrasova, &hellip;</p>
 </section>
 
 <section>
@@ -277,7 +283,7 @@
 
     <aside class="notes">
         r.futures is a set of modules for urban growth modeling
-        based on historical landcover and population data.
+        based on historical land cover and population data.
         New version is more scalable and includes validation modules.
     </aside>
 </section>
@@ -294,13 +300,6 @@
     <p>Geospatial tangible user interface</p>
     <img src="img/cli_tangible.png" class="stretch">
     <p>by NC State Center for Geospatial Analytics</p>
-</section>
-
-<section>
-    <h2>Valley Bottom Flatness Index</h2>
-    <p><em>r.valley.bottom</em> - Multi-resolution Valley Bottom Flatness (MrVBF)</p>
-    <img src="img/r_valley_bottom_3d.png" class="stretch">
-    <p>by Helmut Kudrnovsky, Steven Pawley
 </section>
 
 <section>
@@ -619,20 +618,22 @@
 </section>
 
 <section>
-    <h2>Ecological applications: r.suitability.regions</h2>
+    <h2>Ecological applications</h2>
+    <p><em>r.suitability.regions</em> allows to identify suitable regions, e.g., for species in danger, starting from suitability maps.</p>
     <img src="https://ecodiv.earth/TutorialsNotes/SuitabilityRegions/images/suit002.png" class="stretch">
     <p>by Paulo van Breugel</p>
 </section>
 
 <section>
     <h2>Weighted layers for dasymetric mapping</h2>
+    <p><em>r.area.createweight</em> creates a weighting layer for dasymetric mapping using a random forest regression model.</p>
     <img src="img/r.area.createweight_out.png" class="stretch">
     <p>by Charlotte Flasse, Tais Grippa and Safa Fennia. <a href="https://doi.org/10.5194/isprs-archives-XLVI-4-W2-2021-55-2021">DOI.</a></p>
 </section>
 
 <section>
     <h2>Can you see that landslide??</h2>
-    <p>r.survey allows to assess whether objects of certain size could be detected by an observer moving along roads or sitting on a flying object</p>
+    <p><em>r.survey</em> allows to assess whether objects of certain size could be detected by an observer moving along roads or sitting on a flying object</p>
     <img src="https://pbs.twimg.com/media/E5zqWcvXsAMKND5?format=jpg&name=4096x4096" class="stretch">
     <p>by Ivan Marchesini</p>
 </section>
@@ -644,8 +645,8 @@
         <div class="column">
             <small>
                 <ul>
-                    <li><b>m.crawl.thredds</b>: Lists URLs for netCDF datasets on Thredds servers</li>
-                    <li><b>t.rast.import.netcdf</b>: Makes Spatio-temporal data in netCDF format directly available for analysis in GRASS STRDS (also without downloading)</li>
+                    <li><em>m.crawl.thredds</em>: Lists URLs for netCDF datasets on Thredds servers</li>
+                    <li><em>t.rast.import.netcdf</em>: Makes Spatio-temporal data in netCDF format directly available for analysis in GRASS STRDS (also without downloading)</li>
                 </ul>
             </small>
         </div>
@@ -661,7 +662,7 @@
         <img src="img/netcdf_sources.png" width=100% class="stretch">
     </p>
     <p><small>
-        by Stefan&nbsp;Blumentrath (Norwegian Institute for Nature Research (NINA)) &hellip;
+        by Stefan&nbsp;Blumentrath (Norwegian Institute for Nature Research - NINA) &hellip;
     </small></p>
 </section>
 
@@ -698,7 +699,7 @@
     <h2>Sentinel, MODIS, Landsat, NED, NAIP</h2>
     <p>
         Automated download and import of common datasets
-        <small>i.sentinel, i.modis, i.landsat.download, r.in.usgs, &hellip;</small>
+        <small>i.sentinel, i.modis, i.landsat, r.in.usgs, r.in.nasadem, &hellip;</small>
     </p>
     <img src="img/usgs_ned_naip_3d.png" class="stretch">
     <p>
@@ -849,6 +850,7 @@
     <h2>GRASS for remote sensing analysis in the cloud</h2>
     <br>
     <img src="img/lst_reconstruction.png" class="stretch">
+    <p><small>Daily LST space-time reconstruction done with GRASS - <a href="https://www.mdpi.com/2072-4292/9/12/1333/htm">Metz et al. 2017.</a></small></p>
 </section>
 
 <section>
@@ -869,20 +871,21 @@
     <h2>Forest monitoring</h2>
     <h6>GRASS modules in use (excerpt):</h6>
     <ul>
-        <font size="3"><li><b><em>r.mapcalc</li>
+        <b><em><font size="3"><li>r.mapcalc</li>
             <li>r.learn.ml2</li>
             <li>r.texture</li>
             <li>r.resamp.interp</li></font></b></em>
     </ul>
     <br>
     <img src="img/hermosa1.png" width="49%"> <img src="img/hermosa2.png" width="46%">
+    <small>Register and try the HERMOSA demo at <a href="https://hermosa.earth/">https://hermosa.earth</a></small>
 </section>
 
 <section>
     <h2>Flood Mapping in Ecuador based on Sentinel-1 data</h2>
     <h6>GRASS modules in use (excerpt):</h6>
     <ul>
-        <font size="3"><li><b><em>r.mapcalc</li>
+        <b><em><font size="3"><li>r.mapcalc</li>
             <li>i.segment</li>
             <li>t.rast.algebra</li>
             <li>t.rast.series</li></font></b></em>
@@ -925,7 +928,7 @@
 
 <section>
     <h2>Access to Source Code</h2>
-    Documentation links to relevant parts of the source code.
+    Documentation links to the source code.
     <img src="img/module_author_source.png" class="stretch">
     <p>by Luca Delucchi
 </section>
@@ -959,8 +962,11 @@
     <h2>Other contributions are relevant too!</h2>
     <ul>
         <li>Translation: we use <a href="https://www.transifex.com/grass-gis/">Transifex</a></li>
-        <li>Documentation: start by fixing typos in manual pages, add examples where missing, create cool screenshots, write tutorials in the wiki, etc.</li>
-        <li>Contribute material for social media</li>
+        <li>Documentation: start by fixing typos in manual pages, add examples where missing, create cool screenshots, write tutorials in the <a href="https://grasswiki.osgeo.org/wiki/GRASS-Wiki">wiki</a>, etc.</li>
+        <li>Contribute material for our social media <a href="https://twitter.com/GRASSGIS"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.facebook.com/groups/GRASS"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/groups/2718015/"><i class="fa fa-linkedin"></i></a></li>
+        <li>Write a blog post for our website</li>
         <li>Bring your own ideas!</li>
     </ul>
 </section>
