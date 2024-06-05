@@ -131,24 +131,27 @@
             <div class="slides">
 
 <!--
-This talk gives an overview of the current state of the GRASS GIS project for both users and developers. It will cover topics relevant for integrating GRASS GIS into existing workflows and projects and for contributing to this community-driven open-source project. Reflecting on the 40th birthday, the talk will try to address some common misconceptions about the project such as “it is command-line only”, “it is only a desktop GIS,” and “it’s been around for long, so it must be well-funded.”
+This talk will give a comprehensive overview of the latest developments and progress of the GRASS GIS project for users and developers. 
+The talk will cover topics relevant for integrating GRASS GIS engine into existing workflows. We will dispel some common misconceptions
+about the project, such as "it's just a command line", "it's just a desktop GIS", “it's a QGIS plugin” and "it's been around for a 
+long time, so it must be well funded".
 
-First, the talk will cover improvements to the graphical user interface (GUI). Warranted or not, many potential users perceive GRASS GIS as difficult to use; the new versions (8.0, 8.2, 8.3) are changing many parts of the GUI to address this problem and make it easier for first-time users to adopt GRASS GIS. The GUI is now switching to a single-window layout as this new layout matured and became the number one choice of even advanced users. This adds to an already established easier startup without a need for a welcome screen and streamlined data management in the GUI.
+Many potential users perceive GRASS GIS as difficult to use. During the talk, we'll cover different improvements to the graphical 
+interface that are aimed at addressing this problem. The switch to a mature single-window layout, an easier startup, streamlined 
+data management and the upcoming command history pane are all improvements attempting to increase user-friendliness and make it 
+easier for newcomers to adopt GRASS GIS.
 
-The talk will also cover a series of improvements called for by industry and academic users including simplified session management and streamlined command line interface. This will transition into the various ways of how GRASS GIS can be used for geospatial data processing in Python, R, QGIS, command line, and in the cloud.
+The talk will also go through a series of improvements relevant for industry and academic users to facilitate the integration 
+of GRASS data processing and analytic tools in their workflows using Python or R, either on the command line or in the cloud. 
+Examples of these improvements are the parallelisation of many modules with OpenMP enabling accelerated processing of large 
+data sets and the stricter compiler configurations ensuring code quality in C, C++ and Python.
 
-Relevant to quality assurance, the code quality of C and C++ code improved significantly in the last year. The code compiles with more strict compiler settings than ever with the Clang compiler and we are heading towards pedantic compliance with the GCC compiler. Similarly, Python code improved significantly in the past few years and more improvements are underway and will be covered in the talk.
-
-New funding options - now available through OpenCollective - will be presented in the talk in the hope of sparking a discussion during the conference about meeting our funding goals.
-
-This talk will also report on GRASS GIS Community Meeting 2023 in Prague where the participants celebrated the 40th birthday of GRASS GIS by contributing more code.
-
-While this talk is presented by a single speaker, the project is a combined work by many organizations and individuals. GRASS GIS is an OSGeo Project, currently developed on GitHub with oversight from the Project Steering Committee elected by the project contributor community at large.
+Finally, the latest community activities and funding opportunities will be presented.
 -->
 
 
 <section>
-    <h1>State of GRASS GIS: The 40's and the identity crisis</h1>
+    <h1>Status of GRASS GIS project: The 40s and the identity crisis</h1>
     <p style="margin-top: 0.5em">
         <a href="http://veroandreo.gitlab.io/" style="font-weight: bold">
             Veronica (Vero) Andreo
@@ -169,29 +172,16 @@ While this talk is presented by a single speaker, the project is a combined work
 
 
 <section>
-<h2>Vaclav (Vashek) Petras</h2>
+<h2>Veronica (Vero) Andreo</h2>
 <ul>
-    <li>Research Software Engineer at NC State's Center for Geospatial Analytics
-    <li>BS &amp; MS in Geoinformatics, Czech Technical University in Prague,
-        PhD in Geospatial Analytics, NC State
-    <li>GRASS GIS: Development Team, Project Steering Committee
+    <li>Researcher and lecturer at <a href="https://ig.conae.unc.edu.ar">Gulich Institute</a> from the <a href="https://www.argentina.gob.ar/ciencia/conae">Argentinean Space Agency - CONAE</a>, working on applications of RS & GIS for disease ecology</li>
+    <li>Visiting scholar at NC State's Center for Geospatial Analytics
+    <li>Lic. &amp; PhD in Biology, University of Rio Cuarto (Argentina),
+        MS in Applications of the Spatial Information, University of Cordoba (Argentina)
+    <li>GRASS GIS: Development Team, Project Steering Committee chair
 </ul>
-<img src="img/Veronica_Andreo.jpg" class="stretch">
-</section>
-
-
-<section>
-    <h2>About the presenter...</h2>
-    <br>
-    <ul>
-        <li>PhD in Biology and MSc in Remote Sensing and GIS</li>
-        <img class="bio-img" src="img/vero_round_small.png">
-        <li>Researcher and lecturer at <a href="https://ig.conae.unc.edu.ar">Gulich Institute</a> from the <a href="https://www.argentina.gob.ar/ciencia/conae">Argentinean Space Agency - CONAE</a>, working on applications of RS & GIS for disease ecology</li>
-        <li><a href="https://grass.osgeo.org/">GRASS GIS</a> dev team and PSC Chair</li>
-        <li><a href="https://www.osgeo.org">OSGeo</a> Charter member</li>
-        <li><a href="https://2021.foss4g.org">FOSS4G</a> enthusiast and advocate</li>
-    </ul>
-    <p align="right" style="font-size:18px"><a href="https://veroandreo.gitlab.io/">https://veroandreo.gitlab.io/</a></p>
+<img src="img/profile.png" class="bio-img">
+<p align="right" style="font-size:18px"><a href="https://veroandreo.gitlab.io/">https://veroandreo.gitlab.io/</a></p>
 </section>
 
 
