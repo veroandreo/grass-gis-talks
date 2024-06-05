@@ -3,23 +3,25 @@
 
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <title>GRASS GIS: Not What You Think</title>
+        <title>Status of GRASS GIS project</title>
 
         <meta name="description" content="GRASS GIS is a general geospatial processing tool. The latest version comes with a single-window layout and streamlined data management addressing user feedback. GRASS’ code was recently revitalized by code quality improvements, a perfect gift for its 40th birthday!">
-        <meta name="author" content="Vaclav Petras">
+        <meta name="author" content="Veronica Andreo">
 
-        <link rel="stylesheet" href="dist/reset.css">
-        <link rel="stylesheet" href="dist/reveal.css">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="reveal/reset.css">
+        <link rel="stylesheet" href="reveal/reveal.css">
         <link rel="stylesheet" href="css/theme/osgeo.css" id="theme">
         <link rel="stylesheet" href="css/nouislider.min.css" id="slide">
 
         <!-- Theme used for syntax highlighted code -->
-        <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+        <link rel="stylesheet" href="reveal/plugin/highlight/monokai.css" id="highlight-theme">
         <!-- For chalkboard plugin -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+       
         <!-- If the query includes 'print-pdf', include the PDF print sheet -->
         <script>
             if( window.location.search.match( /print-pdf/gi ) ) {
@@ -90,6 +92,11 @@
        url('lib/font/sintony/sintony-v4-latin-700.svg#Sintony') format('svg'); /* Legacy iOS */
 }
 
+.reveal i.fa {
+    font-family:FontAwesome;
+    font-style: normal;
+}
+
 .reveal li > ul {
     font-size: 85%;
     line-height: 110%;
@@ -123,14 +130,16 @@
     max-width: 47%;
 }
 </style>
+</head>
 
+<body>
+    <div class="reveal">
+    <div class="slides">
 
-    </head>
-    <body>
-        <div class="reveal">
-            <div class="slides">
+<!-- ################# CONTENT ################# -->
 
 <!--
+Abstract
 This talk will give a comprehensive overview of the latest developments and progress of the GRASS GIS project for users and developers. 
 The talk will cover topics relevant for integrating GRASS GIS engine into existing workflows. We will dispel some common misconceptions
 about the project, such as "it's just a command line", "it's just a desktop GIS", “it's a QGIS plugin” and "it's been around for a 
@@ -174,7 +183,6 @@ Finally, the latest community activities and funding opportunities will be prese
 <section>
 <h2>Veronica (Vero) Andreo</h2>
 <ul>
-    <li>Researcher and lecturer at <a href="https://ig.conae.unc.edu.ar">Gulich Institute</a> from the <a href="https://www.argentina.gob.ar/ciencia/conae">Argentinean Space Agency - CONAE</a>, working on applications of RS & GIS for disease ecology</li>
     <li>Visiting scholar at NC State's Center for Geospatial Analytics
     <li>Lic. &amp; PhD in Biology, University of Rio Cuarto (Argentina),
         MS in Applications of the Spatial Information, University of Cordoba (Argentina)
@@ -196,6 +204,52 @@ Finally, the latest community activities and funding opportunities will be prese
 
 <section>
     <h1>What is GRASS GIS?</h1>
+</section>
+
+
+<section>
+    <h2>What is GRASS GIS?</h2>
+    <p>Open-source desktop GIS</p>
+    <img src="img/gui_pink_viewshed.png" class="stretch">
+    
+</section>
+
+<section>
+    <h2>What is GRASS GIS?</h2>
+    <p>Processing backend in QGIS</p>
+    <img src="https://media.githubusercontent.com/media/baharmon/baharmon.github.io/master/images/governors-island/grass-in-qgis.jpg" class="stretch">
+    <small>Image source: <a href="https://baharmon.github.io/grass-in-qgis">baharmon.github.io/grass-in-qgis</a></small>
+    
+</section>
+<section>
+    <h2>What is GRASS GIS?</h2>
+    <p>Geospatial data analytics tool in RStudio</p>
+    <img src="RwithinGRASS_and_Rstudio_from_grass.png" class="stretch">
+</section>
+
+<section>
+    <h2>What is GRASS GIS?</h2>
+    <p>Geovisualization and data analytics tool in a Python notebook</p>
+    <img src="img/jupyter3.png" class="stretch">
+</section>
+
+<section>
+    <h2>What is GRASS GIS?</h2>
+    <p>Geoprocessing engine running in HPC environment</p>
+    <img src="img/HPC_interaction.png" class="stretch">   
+</section>
+
+<section>
+    <h2>What is GRASS GIS?</h2>
+    <p>Geospatial platform for developing custom models</p>
+    <img src="img/programming_FUTURES.png" class="stretch">
+</section>
+
+<section>
+    <h2>What is GRASS GIS?</h2>
+    <p>Cloud geoprocessing backend</p>
+    <img src="https://neteler.gitlab.io/actinia-introduction/img/actinia_architecture_FTTH.png" class="stretch">
+    <small>Image source: <a href="https://neteler.gitlab.io/actinia-introduction/">neteler.gitlab.io/actinia-introduction/</a></small>
 </section>
 
 
@@ -655,16 +709,19 @@ Finally, the latest community activities and funding opportunities will be prese
     </p>
 </section>
 
+    </div>
+    </div>
 
-            </div>
-        </div>
+<!-- ################# END CONTENT ################# -->
 
-        <script src="dist/reveal.js"></script>
-        <script src="plugin/notes/notes.js"></script>
-        <script src="plugin/markdown/markdown.js"></script>
-        <script src="plugin/highlight/highlight.js"></script>
-        <script src="plugin/math/math.js"></script>
-        <script src="plugin/chalkboard/plugin.js"></script>
+        <!-- reveal internal plugins -->
+        <script src="reveal/reveal.js"></script>
+        <script src="reveal/plugin/notes/notes.js"></script>
+        <script src="reveal/plugin/markdown/markdown.js"></script>
+        <script src="reveal/plugin/highlight/highlight.js"></script>
+        <script src="reveal/plugin/math/math.js"></script>
+        <!-- extra plugins -->
+        <script src="reveal_plugins/chalkboard/plugin.js"></script>
         <script>
 
             // Full list of configuration options available here:
