@@ -9,8 +9,8 @@
         <meta name="description" content="GRASS GIS is a general geospatial processing tool. The latest version comes with a single-window layout and streamlined data management addressing user feedback. GRASS’ code was recently revitalized by code quality improvements, a perfect gift for its 40th birthday!">
         <meta name="author" content="Veronica Andreo">
 
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
         <link rel="stylesheet" href="reveal/reset.css">
         <link rel="stylesheet" href="reveal/reveal.css">
@@ -130,7 +130,6 @@
     max-width: 47%;
 }
 </style>
-
 </head>
 
 <body>
@@ -161,7 +160,9 @@ Finally, the latest community activities and funding opportunities will be prese
 
 
 <section>
-    <h1>Status of GRASS GIS project: The 40s and the identity crisis</h1>
+    <h1>Status of GRASS GIS project:</h1>
+    <h1 style="margin-bottom: 1.5em">Middlelife identity crisis or opportunity?</h1>
+
     <p style="margin-top: 0.5em">
         <a href="http://veroandreo.gitlab.io/" style="font-weight: bold">
             Veronica (Vero) Andreo
@@ -178,6 +179,10 @@ Finally, the latest community activities and funding opportunities will be prese
     <p><small>FOSS4G Europe, Tartu, July 1-7, 2024</small></p>
     <p>
         <a href="https://veroandreo.github.io/grass-gis-talks/foss4gEU2024.html">veroandreo.github.io/grass-gis-talks</a>
+    
+    <aside class="notes">
+        Good morning, in this presentation I will walk you through the latest news from the GRASS GIS project.
+    </aside>
 </section>
 
 
@@ -185,12 +190,11 @@ Finally, the latest community activities and funding opportunities will be prese
 <h2>Veronica (Vero) Andreo</h2>
 <ul>
     <li>Visiting scholar at NC State's Center for Geospatial Analytics
+        <img src="img/profile.png" class="bio-img">
     <li>Lic. &amp; PhD in Biology, University of Rio Cuarto (Argentina),
         MS in Applications of the Spatial Information, University of Cordoba (Argentina)
-    <li>GRASS GIS: Development Team, Project Steering Committee chair
+    <li>GRASS GIS: Development Team, PSC chair
 </ul>
-<img src="img/profile.png" class="bio-img">
-<p align="right" style="font-size:18px"><a href="https://veroandreo.gitlab.io/">https://veroandreo.gitlab.io/</a></p>
 </section>
 
 
@@ -200,19 +204,49 @@ Finally, the latest community activities and funding opportunities will be prese
     <br>
     <img src="img/community_prague_2023_group.jpg" class="stretch">
     <img src="img/github_contributors_2023-10-09.png" style="width: 70%">
+    <!-- update with 2024 pics -->
+</section>
+
+
+<section data-markdown
+         data-background-image="https://grass.osgeo.org/images/logos/banner.jpg"
+         data-background-opacity="0.6">
+    <textarea data-template>
+    ## Overview of this talk
+        - What is GRASS GIS?
+        - Releases
+        - New features in GRASS GIS 8.4+
+        - Community contributed extensions
+        - Sustainability
+        - Mentoring
+        - Funding
+        - Governance
+        - Community
+        - Get involved
+        <!-- reorder items accordingly -->
+    </textarea>
 </section>
 
 
 <section>
     <h1>What is GRASS GIS?</h1>
+
+    <aside class="notes">
+        Funny positioning of this talk - somehow reflects our identity crisis
+        as well as users perception of GRASS
+    </aside>
 </section>
 
+<section>
+    <h2>What is GRASS GIS?</h2>
+    <p>Geek command line GIS</p>
+    <img src="img/grass_cli.png" class="stretch">
+</section>
 
 <section>
     <h2>What is GRASS GIS?</h2>
     <p>Open-source desktop GIS</p>
     <img src="img/gui_pink_viewshed.png" class="stretch">
-    
 </section>
 
 <section>
@@ -221,11 +255,17 @@ Finally, the latest community activities and funding opportunities will be prese
     <img src="https://media.githubusercontent.com/media/baharmon/baharmon.github.io/master/images/governors-island/grass-in-qgis.jpg" class="stretch">
     <small>Image source: <a href="https://baharmon.github.io/grass-in-qgis">baharmon.github.io/grass-in-qgis</a></small>
     
+    <aside>
+        Not a QGIS plugin!
+    </aside>
 </section>
+
 <section>
     <h2>What is GRASS GIS?</h2>
     <p>Geospatial data analytics tool in RStudio</p>
     <img src="RwithinGRASS_and_Rstudio_from_grass.png" class="stretch">
+
+    <!-- update screenshot and text -->
 </section>
 
 <section>
@@ -255,279 +295,10 @@ Finally, the latest community activities and funding opportunities will be prese
 
 
 <section>
-    <h2>That's something about grazing, no?</h2>
-    <img src="img/cows_on_a_pasture.jpg" class="stretch">
-</section>
-
-
-<section>
-    <h2>Grassy the Hungry Cow</h2>
-    <pre style="font-size: 100%;">
-         -----------------------------------
-        | I'm always hungry for more GRASS! |
-         -----------------------------------
-                \   ^__^
-                 \  (oo)\_______
-                    (__)\       )\/\
-                        ||----w |
-        _\|/__\|/__\|/_ ||     ||  _\|/__\|/_
-    </pre>
-    <p>
-        <small>Thanks to <em>cowsay</em>.</small>
-    </p>
-</section>
-
-
-<section>
-    <h2>It's not about smoking weed?</h2>
-    <img src="img/no_smoking.svg" class="stretch">
-</section>
-
-
-<section>
-    <h2>FOSS4G 2006 Conference</h2>
-    <p>
-        Lausanne, Switzerland, September 2006
-    </p>
-    <blockquote>
-        It was a great success. It was the first <b>joint</b> conference that brought together the different FOSS4G "tribes",
-        merging the GRASS Users conference series, with the Mapserver, EOGEO and Java developers meetings.
-        <br>
-        <small>
-            &mdash;
-            Mitasova (2006): FOSS4G 2006 Conference: The meeting of the tribes
-            in <em>GRASS&nbsp;/&nbsp;OSGeo-News</em>
-        </small>
-    </blockquote>
-</section>
-
-
-<section>
-    <h2>GRASS GIS is command-line only, no?</h2>
-    <img src="img/grass_cli.png" class="stretch">
-</section>
-
-
-<section>
-    <h2>GRASS GIS is only a desktop GIS, no?</h2>
-    <img src="img/gui_data_pane_blue_isochrones.png" class="stretch">
-</section>
-
-
-<section>
-    <h1>Interface options</h1>
-</section>
-
-
-<section>
-    <h2>Python</h2>
-    Python API comes with GRASS GIS.
-    <br>
-    <img src="img/jupyter_interactive_viewshed.png" class="stretch">
-</section>
-
-<section>
-    <h2>R</h2>
-    rgrass package to use GRASS GIS from R is on CRAN.
-    <br>
-    <img src="img/splash_screen.png" class="stretch">
-</section>
-
-
-<section>
-    <h2>QGIS</h2>
-    GRASS tools are available through the Processing Plugin<br>(GUI and Python).
-    <br>
-    <img src="img/qgis_processing.png" class="stretch">
-</section>
-
-
-<section>
-    <h2>Command Line</h2>
-    <ul>
-        <li>Interactive shell</li>
-        <li>One-time execution or batch usage with <code>--exec</code></li>
-    </ul>
-    <br>
-    <img src="img/grass_cli.png" class="stretch">
-</section>
-
-
-<section>
-    <h2>Cloud</h2>
-    <ul>
-        <li>CLI</li>
-        <li>Python</li>
-        <li>actinia</li>
-        <li>OpenPlains</li>
-    </ul>
-    <br>
-    <img src="img/actinia_logo.svg" class="stretch">
-</section>
-
-
-<section>
-    <h1>Graphical User Interface</h1>
-</section>
-
-
-<section>
-    <h2>No startup screen</h2>
-    Startup screen was a stumbling block for many first-time users.
-    <img src="img/grass_startup.png" class="stretch">
-</section>
-
-
-<section>
-    <h2>Project Loaded on Start</h2>
-    Desktop GRASS GIS starts with a project loaded<br>(last-used or default).
-    <img src="img/dark_theme_v_clip.png" class="stretch">
-</section>
-
-
-<section>
-    <h2>Streamlined Data Management</h2>
-    New <em>Data</em> tab is a central place to manipulate data in a project.
-    <img src="img/mapsets_with_green_landscape.png" class="stretch">
-</section>
-
-
-<section>
-    <h2><em>Location</em> is Becoming a <em>Project</em></h2>
+    <h2>Releases</h2>
     <ul>
         <li>
-            <code>/home/joanna/grassdata</code> (database directory, path)
-            <ul>
-                <li>
-                    <code>maryland</code> (location &rightarrow; project)
-                    <ul>
-                        <li><code>new_highway</code> (mapset, sub-project)
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
-</section>
-
-
-<section>
-    <h2>Multiple windows</h2>
-    Multiple windows was the only option.
-    <p>
-        Still available as before, but&hellip;
-    </p>
-    <img src="img/grass_gis_v7.2.1.png" class="stretch">
-</section>
-
-<section>
-    <h2>Single-window Interface</h2>
-    Now single-window interface is the default.
-    <img src="img/gui_orange_viewsheds_buffer.png" class="stretch">
-</section>
-
-
-<section>
-    <h2>Happy 40th birthday, GRASS GIS!</h2>
-    <img src="img/grassy_birthday_cake.webp" class="stretch">
-</section>
-
-
-<section>
-    <h2>Time to clear up some misconceptions related to age</h2>
-</section>
-
-
-<section>
-    <h1>Funding</h1>
-</section>
-
-
-<section>
-    <h2>It’s been around for long, so it must be well-funded</h2>
-</section>
-
-
-<section>
-    <h2>How people imagine a GRASS developer</h2>
-    <br>
-    <img src="img/funded_professor.jpg" alt="Person at a table working on laptop with file cabinets or submitted and funded proposals" class="stretch">
-    <p>
-        <small>
-            Well-funded professor thinking about new algorithms
-        </small>
-    </p>
-</section>
-
-
-<section>
-    <h2>The real GRASS developer</h2>
-    <br>
-    <img src="img/busy_parent.jpg" alt="Person at a table working on laptop and two shouting children" class="stretch">
-    <p>
-        <small>
-            Busy parent debugging some code
-        </small>
-    </p>
-</section>
-
-
-<section>
-    <img src="img/drawing_the_parent_image.jpg" class="stretch">
-    <p>
-        <small>
-            When I made the image
-        </small>
-    </p>
-</section>
-
-
-<section>
-    <h2>NSF grant lead by NC State</h2>
-    <ul>
-        <li>NSF grant awarded to NC State, ASU, NMSU, Yale</li>
-        <li>to enhance infrastructure</li>
-        <li>to revise contributing guidelines</li>
-        <li>to support community building</li>
-    </ul>
-    <p>Note: The NSF program is aiming at sustainability, not adding features or fix bugs.</p>
-    <img src="img/nsf_grant_announcement.png" class="stretch">
-</section>
-
-
-<section>
-    <h2>New Funding Options on OpenCollective</h2>
-    <ul>
-        <li>
-            Donation (one-time, any amount), Supporter starts at 10 USD/month, Sponsor starts at 500 USD/year
-            <img src="img/open_collective_top.png">
-        </li>
-        <li>
-            Feedback? Talk to me about being part of the solution!
-        </li>
-        <li>
-            T-shirt fundraiser test: Ask me after the talk for details!
-        </li>
-    </ul>
-    <img src="img/open_collective_qr.png" class="stretch">
-</section>
-
-
-<section>
-    <img src="img/open_collective_qr.png" class="stretch">
-</section>
-
-
-<section>
-    <h1>Releases</h1>
-</section>
-
-
-
-<section>
-    <h2>There are no new releases, or?</h2>
-    <ul>
-        <li>
-            8.3.1 Current, October 2023
+            8.3.2 Current, March 2024
             <small>Current version for everyday user</small>
         </li>
         <li>
@@ -543,26 +314,45 @@ Finally, the latest community activities and funding opportunities will be prese
     <img src="img/splash_screen.png" class="stretch">
 </section>
 
-
 <section>
-    <h2>Minor Releases Bring New Things: T or F?</h2>
-</section>
-
-
-<section>
-    <h2>Minor Releases</h2>
     <ul>
-        <li>major.minor.micro
-            <ul>
-                <li>micro (x.y.z) brings fixes,</li>
-                <li>minor (x.y) brings features,</li>
-                <li>major (x) brings features and possibly backward incompatible changes</li>
-            </ul>
-        </li>
+        <li> major.minor.micro &ndash; semantic versioning:</small>
+        <ul>
+          <li><small>major (x) brings <b>features and possibly backward incompatible changes</b></small></li>
+          <li><small>minor (x.y) brings <b>features and fixes</b></small></li>
+          <li><small>micro (x.y.z) brings <b>fixes</b></small></li>
+        </ul>
     </ul>
     <br>
     <img src="img/hexagons_3d_white_outlier.png" class="stretch">
 </section>
+
+
+<section>
+    New features in GRASS 8.4
+
+    Tools (i.svm*, v.fill.holes, notable fixes in r.horizon - ask natrx if they want to be mentioned) 
+    API and Library changes (improvements in grass.script - create location/project without a running session and grass.jupyter - SeriesMap) 
+    GUI (Preferences, History tab, modeler integrated in single window, undockable map display windows, notable fixes in d.* modules when accessed from cli - much faster rendering) 
+    Renaming location to project - community feedback
+
+   <aside>
+    GRASS evolves, it is not a monolith
+</aside>
+</section>
+
+
+<section>
+    Community contributed extensions
+
+    r.flowaccumulation, 
+    r.fusion,
+    r.windfetch, 
+    r.maxent.*, 
+    plotting tools, 
+    downloading data tools,  
+</section>
+
 
 
 <section>
@@ -595,6 +385,188 @@ Finally, the latest community activities and funding opportunities will be prese
 
 
 <section>
+    Code quality
+
+    pre-commit - locally checks formatting with ClangFormat, Flake8 and Black
+    
+    in CI in each PR with each commit
+    code formatting in CI (ClangFormat, Black) - output is in the logs and you get the red cross that prevents merging
+    reviewdog in CI (it runs ClangFormat and Black again and suggests the changes in the PR, not in a cryptic log)
+    Flake8 and Pylint in CI (Best practices)
+    Bandit for vulnerability in Python in CI
+    CodeQL for security in C 
+
+    Coverity for security and code quality in C++ - runs once a day
+</section>
+
+
+<section>
+    Distribution (Docker, CMake, FSH, conda)
+</section>
+
+
+<section>
+    Contributing
+
+    Tutorials, translations, style and best practices guidelines
+</section>
+
+
+<section>
+
+    <section>
+        Mentoring
+
+        GSoC 2024 (eodag, json, grass.jupyter), 
+        Mentoring program (examples - screenshot), 
+        Student grants (history tab by Linda, call open) call is open for this fall
+    </section>
+
+    <section>
+        <h2>Mentoring and Student Grants Program</h2>
+        <ul>
+            <li><a href="https://grasswiki.osgeo.org/wiki/Mentoring_Program">Mentoring</a> to integrate GRASS GIS into your workflows</li>
+            <li><a href="https://grasswiki.osgeo.org/wiki/Student_Grants">Student grants</a> to contribute to GRASS GIS</li>
+        </ul>
+        <img src="img/community_prague_2023_laptop.jpg" class="stretch">
+    </section>
+
+</section>
+
+
+<section>
+    Community
+
+    Community meeting Prague 2024 - results, thanks to supporters; 
+    new contributors: Edouard and Linda
+    Docs (conversion to md) 
+    STAC support on the way
+</section>
+
+
+<section>
+    Governance
+
+    Upcoming PSC elections, 
+    mission and roadmap,
+    Formalization of procedures (version numbering and python adopted, draft RFC for releases, security doc), 
+    PR require a positive review to be merged 
+</section>
+
+
+<section>
+    <section>
+        Funding
+
+        NSF
+        Sponsoring, Open collective 
+    </section>   
+
+    <section>
+        <h2>NSF grant lead by NC State</h2>
+        <ul>
+            <li>NSF grant awarded to NC State, ASU, NMSU, Yale</li>
+            <li>to enhance infrastructure</li>
+            <li>to revise contributing guidelines</li>
+            <li>to support community building</li>
+        </ul>
+        <p>Note: The NSF program is aiming at sustainability, not adding features or fix bugs.</p>
+        <img src="img/nsf_grant_announcement.png" class="stretch">
+    </section>
+
+    <section>
+        <h2>New Funding Options on OpenCollective</h2>
+        <ul>
+            <li>
+                Donation (one-time, any amount), Supporter starts at 10 USD/month, Sponsor starts at 500 USD/year
+                <img src="img/open_collective_top.png">
+            </li>
+            <li>
+                Feedback? Talk to me about being part of the solution!
+            </li>
+            <li>
+                T-shirt fundraiser test: Ask me after the talk for details!
+            </li>
+        </ul>
+        <img src="img/open_collective_qr.png" class="stretch">
+    </section>
+    
+</section>
+
+
+<section>
+    Support 
+
+    Community 
+    Commercial
+</section>
+
+
+<section>
+    <h2>Scientific Foundations</h2>
+    <ul>
+        <li>references to related scientific papers</li>
+        <li>references to papers associated with tools or libraries</li>
+        <li>tools used in open science</li>
+    </ul>
+    <br>
+    <img src="img/module_references.png" class="stretch">
+    <br>
+    <a href="https://scholar.google.com/citations?user=gJ0ZB0cAAAAJ">GRASS GIS google scholar profile</a>
+</section>
+
+
+<section>
+
+    <section>
+        Get involved
+
+        Sponsor/Donate, Code, translate, doc, get in touch with us (add channels)
+    
+        <img src="img/open_collective_qr.png" class="stretch">
+    </section>
+
+    <section>
+        <h2>Join a Working Group</h2>
+        <ul>
+            <li>
+                Groups:
+                <ul>
+                    <li>geoprocessing engine</li>
+                    <li>being a good neighbor in open source ecosystem</li>
+                    <li>documentation</li>
+                    <li>community engagement and promotion</li>
+                </ul>
+            </li>
+            <li>See <a href="https://grasswiki.osgeo.org/wiki/Working_Groups">wiki</a> for details!</li>
+        </ul>
+        <img src="img/community_prague_2023_explaining.jpg" class="stretch">
+    </section>
+
+</section>
+
+
+<section>
+    <img src="img/grass_license.png" alt="GRASS GIS logo" class="stretch">
+    <p>
+        <small>
+        Ask a question, get a special sticker <i class="fa fa-grin-wink">
+        </small>
+    </p>
+    <p>
+            <small>
+                veroandreo&#64;gmail&#46;com,
+                <a href="https://twitter.com/VeronicaAndreo/">@VeronicaAndreo</a>, <a href="https://github.com/veroandreo/">@veroandreo</a>
+                <br>
+                <small>
+                    <a href="https://veroandreo.github.io/grass-gis-talks">veroandreo.github.io/grass-gis-talks</a>
+                </small>
+            </small>
+    </p>
+</section>
+
+
+<!-- <section>
     <h1>Features</h1>
     Features long-requested from industry now available and mature
     (and usually overlooked by desktop users).
@@ -632,88 +604,13 @@ Finally, the latest community activities and funding opportunities will be prese
         coordinates=642964,222890 \
         --json
     </pre>
-</section>
+</section> -->
 
-
-<section>
-    <h2>Data Analytics Workflows</h2>
-    See the separate talk!
-    <p>
-    Caitlin Haedrich<br>
-    Computational Notebooks for Reproducible Geospatial Computation in Research and Education<br>
-    October 25<br>
-    2:00 – 2:30 PM<br>
-    Poe Room<br>
-    </p>
-
-    <img src="img/jupyter_timeseries_viewshed.gif" class="stretch">
-    <p>
-        <a href="https://tinyurl.com/grass-jupyter-8-2">tinyurl.com/grass-jupyter-8-2</a>
-    </p>
-</section>
-
-
-<section>
-    <h2>Community Meeting 2023</h2>
-    GRASS GIS birthday celebrated by advancing CMake build, 8.3.0 release, &hellip;
-    <br>
-    <img src="img/community_prague_2023_room.jpg" class="stretch">
-    <small><a href="https://grass.osgeo.org/news/2023_08_13_grass_community_meeting_prague_june_2023_report/">grass.osgeo.org &gt; News &gt; Report of the GRASS GIS Community Meeting in Prague</a></small>
-    <aside class="notes">This talk will also report on GRASS GIS Community Meeting 2023 in Prague where the participants celebrated the 40th birthday of GRASS GIS by contributing more code.</aside>
-</section>
-
-
-<section>
-    <h2>Mentoring and Student Grants Program</h2>
-    <ul>
-        <li><a href="https://grasswiki.osgeo.org/wiki/Mentoring_Program">Mentoring</a> to integrate GRASS GIS into your workflows</li>
-        <li><a href="https://grasswiki.osgeo.org/wiki/Student_Grants">Student grants</a> to contribute to GRASS GIS</li>
-    </ul>
-    <img src="img/community_prague_2023_laptop.jpg" class="stretch">
-</section>
-
-
-<section>
-    <h2>Join a Working Group</h2>
-    <ul>
-        <li>
-            Groups:
-            <ul>
-                <li>geoprocessing engine</li>
-                <li>being a good neighbor in open source ecosystem</li>
-                <li>documentation</li>
-                <li>community engagement and promotion</li>
-            </ul>
-        </li>
-        <li>See <a href="https://grasswiki.osgeo.org/wiki/Working_Groups">wiki</a> for details!</li>
-    </ul>
-    <img src="img/community_prague_2023_explaining.jpg" class="stretch">
-</section>
-
-
-<section>
-    <img src="img/grass_license.png" alt="GRASS GIS logo" class="stretch">
-    <p>
-        <small>
-        Ask a question, get a special sticker.
-        </small>
-    </p>
-    <p>
-            <small>
-                vpetras&#64;ncsu&#46;edu,
-                <a href="https://twitter.com/vaclavpetras/">@vaclavpetras</a>, <a href="https://github.com/wenzeslaus/">@wenzeslaus</a>
-                <br>
-                <small>
-                    <a href="https://wenzeslaus.github.io/grass-gis-talks">wenzeslaus.github.io/grass-gis-talks</a>
-                </small>
-            </small>
-    </p>
-</section>
-
-        </div>
-    </div>
 
 <!-- ################# END CONTENT ################# -->
+            </div>
+        </div>
+
 
         <!-- reveal internal plugins -->
         <script src="reveal/reveal.js"></script>
