@@ -160,13 +160,13 @@ Finally, the latest community activities and funding opportunities will be prese
 
 
 <section>
-    <h1>Status of GRASS GIS project:</h1>
-    <h1 style="margin-bottom: 1.5em">Middlelife identity crisis or opportunity?</h1>
+    <h1>Status of GRASS GIS project</h1>
+    <!-- <h1 style="margin-bottom: 1.5em">Middlelife identity crisis or opportunity?</h1> -->
 
     <p style="margin-top: 0.5em">
         <a href="http://veroandreo.gitlab.io/" style="font-weight: bold">
             Veronica (Vero) Andreo
-        </a>
+        </a> and the GRASS GIS community
     </p>
     <p class="title-foot">
         <a href="http://geospatial.ncsu.edu/geoforall/" title="NCSU GeoForAll Lab">NCSU GeoForAll Lab</a>
@@ -189,23 +189,22 @@ Finally, the latest community activities and funding opportunities will be prese
 <section>
 <h2>Veronica (Vero) Andreo</h2>
 <ul>
+    <img src="img/profile.png" class="bio-img">
     <li>Visiting scholar at NC State's Center for Geospatial Analytics
-        <img src="img/profile.png" class="bio-img">
-    <li>Lic. &amp; PhD in Biology, University of Rio Cuarto (Argentina),
-        MS in Applications of the Spatial Information, University of Cordoba (Argentina)
+    <li>Lic. &amp; PhD in Biology, MSc in Applications of the Spatial Information
+    <li>Researcher &amp; lecturer at <a href="https://ig.conae.unc.edu.ar/" target="_blank">Gulich Institute</a></li>
     <li>GRASS GIS: Development Team, PSC chair
+    <li>OSGeo: Charter member</li>
 </ul>
 </section>
 
 
-<section>
+<!-- <section>
     <h2>Community</h2>
     Big thanks to the whole community!
     <br>
     <img src="img/community_prague_2023_group.jpg" class="stretch">
-    <img src="img/github_contributors_2023-10-09.png" style="width: 70%">
-    <!-- update with 2024 pics -->
-</section>
+</section> -->
 
 
 <section data-markdown
@@ -229,30 +228,32 @@ Finally, the latest community activities and funding opportunities will be prese
 
 
 <section>
+
+    <section>
     <h1>What is GRASS GIS?</h1>
 
     <aside class="notes">
         Funny positioning of this talk - somehow reflects our identity crisis
         as well as users perception of GRASS
     </aside>
-</section>
+    </section>
 
 <section>
     <h2>What is GRASS GIS?</h2>
-    <p>Geek command line GIS</p>
-    <img src="img/grass_cli.png" class="stretch">
+    <p>Geek open-source command line GIS</p>
+    <img src="img/grass84_cli.png" class="stretch">
 </section>
 
 <section>
     <h2>What is GRASS GIS?</h2>
     <p>Open-source desktop GIS</p>
-    <img src="img/gui_pink_viewshed.png" class="stretch">
+    <img src="img/grass_gui_multiple_map_displays.png" class="stretch">
 </section>
 
 <section>
     <h2>What is GRASS GIS?</h2>
     <p>Processing backend in QGIS</p>
-    <img src="https://media.githubusercontent.com/media/baharmon/baharmon.github.io/master/images/governors-island/grass-in-qgis.jpg" class="stretch">
+    <img src="img/grass-in-qgis.jpg" class="stretch">
     <small>Image source: <a href="https://baharmon.github.io/grass-in-qgis">baharmon.github.io/grass-in-qgis</a></small>
     
     <aside>
@@ -262,10 +263,8 @@ Finally, the latest community activities and funding opportunities will be prese
 
 <section>
     <h2>What is GRASS GIS?</h2>
-    <p>Geospatial data analytics tool in RStudio</p>
-    <img src="RwithinGRASS_and_Rstudio_from_grass.png" class="stretch">
-
-    <!-- update screenshot and text -->
+    <p>Geovisualization and data analytics tool in RStudio</p>
+    <img src="img/grass_within_rstudio.png" class="stretch">
 </section>
 
 <section>
@@ -293,6 +292,12 @@ Finally, the latest community activities and funding opportunities will be prese
     <small>Image source: <a href="https://neteler.gitlab.io/actinia-introduction/">neteler.gitlab.io/actinia-introduction/</a></small>
 </section>
 
+<section>
+    GRASS is all of that!
+</section>
+
+</section>
+
 
 <section>
     <h2>Releases</h2>
@@ -314,7 +319,7 @@ Finally, the latest community activities and funding opportunities will be prese
     <img src="img/splash_screen.png" class="stretch">
 </section>
 
-<section>
+<!-- <section>
     <ul>
         <li> major.minor.micro &ndash; semantic versioning:</small>
         <ul>
@@ -325,20 +330,22 @@ Finally, the latest community activities and funding opportunities will be prese
     </ul>
     <br>
     <img src="img/hexagons_3d_white_outlier.png" class="stretch">
-</section>
+</section> -->
 
 
 <section>
-    New features in GRASS 8.4
-
-    Tools (i.svm*, v.fill.holes, notable fixes in r.horizon - ask natrx if they want to be mentioned) 
-    API and Library changes (improvements in grass.script - create location/project without a running session and grass.jupyter - SeriesMap) 
-    GUI (Preferences, History tab, modeler integrated in single window, undockable map display windows, notable fixes in d.* modules when accessed from cli - much faster rendering) 
-    Renaming location to project - community feedback
-
-   <aside>
+    
+    <section><h1>New features in GRASS 8.4</h1></section>
+    
+    <section>Tools (i.svm*, v.fill.holes, notable fixes in r.horizon - ask natrx if they want to be mentioned)</section>
+    <section>API and Library changes (improvements in grass.script - create location/project without a running session and grass.jupyter - SeriesMap)</section> 
+    <section>GUI (Preferences, History tab, modeler integrated in single window, undockable map display windows, notable fixes in d.* modules when accessed from cli - much faster rendering) </section> 
+    <section>Renaming location to project - community feedback</section>
+    
+    <aside class="notes">
     GRASS evolves, it is not a monolith
-</aside>
+    </aside>
+
 </section>
 
 
@@ -348,23 +355,33 @@ Finally, the latest community activities and funding opportunities will be prese
     r.flowaccumulation, 
     r.fusion,
     r.windfetch, 
-    r.maxent.*, 
+    r.maxent.train, r.maxent.predict 
     plotting tools, 
     downloading data tools,  
 </section>
 
 
-
 <section>
-    <h1>Code</h1>
+    Upcoming stuff
 </section>
 
 
 <section>
-    <h2>C and C++ Code Quality</h2>
+
+<section>
+    <h1>Code quality and security</h1>
+
+    <aside class="notes">
+        Code quality and security tools run in CI with every PR/commit. 
+        The output is in logs, but also as a suggestion in the PR itself. 
+        These suggestions are made by reviewdog.
+    </aside>
+</section>
+
+<section>
+    <h2>C and C++</h2>
     <ul>
         <li>Issues reported by GCC and Clang such as dangling-else, discarded-qualifiers, format, &hellip; fixed.</li>
-        <li>Even more to come in 2024.</li>
     </ul>
     <br>
     <img src="img/code_in_qtcreator.png" class="stretch">
@@ -374,10 +391,9 @@ Finally, the latest community activities and funding opportunities will be prese
 <section>
     <h2>Python</h2>
     <ul>
-        <li>Code formatted with Black.</li>
-        <li>Flake8 enabled, 2/3 fixed.</li>
-        <li>Pylint partially enabled.</li>
-        <li>Aiming at close-to-default configuration for 2024.</li>
+        <li>Code formatted with Black</li>
+        <li>Flake8 enabled, 2/3 fixed</li>
+        <li>Pylint partially enabled</li>
     </ul>
     <br>
     <img src="img/code_in_vscodium.png" class="stretch">
@@ -385,41 +401,73 @@ Finally, the latest community activities and funding opportunities will be prese
 
 
 <section>
-    Code quality
-
-    pre-commit - locally checks formatting with ClangFormat, Flake8 and Black
-    
+    <h2>Code security</h2>
+    <ul>
+        <li>Bandit for vulnerabilities in Python</li>
+        <li>CodeQL for security in C</li>
+        <li>Coverity for security and code quality in C++ - runs once a day</li>
+    </ul>
+    <!-- pre-commit - locally checks formatting with ClangFormat, Flake8 and Black
     in CI in each PR with each commit
     code formatting in CI (ClangFormat, Black) - output is in the logs and you get the red cross that prevents merging
     reviewdog in CI (it runs ClangFormat and Black again and suggests the changes in the PR, not in a cryptic log)
-    Flake8 and Pylint in CI (Best practices)
-    Bandit for vulnerability in Python in CI
-    CodeQL for security in C 
+    Flake8 and Pylint in CI (Best practices) -->
+</section>
 
-    Coverity for security and code quality in C++ - runs once a day
 </section>
 
 
 <section>
-    Distribution (Docker, CMake, FSH, conda)
+    <h2>Distribution</h2>
+    
+    <ul>
+        <li>Docker</li>
+        <li>CMake</li>
+        <li>FSH</li>
+        <li>conda package on the way</li>
+    </ul> 
 </section>
 
 
 <section>
-    Contributing
+    <h2>Contributing</h2>
 
-    Tutorials, translations, style and best practices guidelines
+    <ul>
+        <li>New tutorials</li>
+        <li>Translations in Weblate</li>
+        <li>New style and best practices guidelines</li>
+    </ul> 
 </section>
 
 
 <section>
 
     <section>
-        Mentoring
+        <h2>Mentoring</h2>
+        <ul>
+            <li>GSoC: 3 students</li>
+            <li>Student Grant: 1 student 2023-2024. Call is open for this fall!</li>
+            <li>Mentoring program: xx people</li>
+        </ul>
 
-        GSoC 2024 (eodag, json, grass.jupyter), 
-        Mentoring program (examples - screenshot), 
-        Student grants (history tab by Linda, call open) call is open for this fall
+        <aside class="notes">
+
+        </aside>
+    </section>
+
+    <section>
+        <h2><a href="https://grasswiki.osgeo.org/wiki/GRASS_GSoC_2024_EODAG_Support" target="_blank">Add EODAG support to GRASS GIS</a></h2> 
+
+    </section>
+
+    <section>
+        <h2><a href="https://grasswiki.osgeo.org/wiki/GRASS_GSoC_2024_Improve_user_experience_in_Jupyter_Notebooks" target="_blank">Improve GRASS user experience in Jupyter Notebook</a></h2>
+        
+    </section>
+
+    <section>
+        <h2><a href="https://grasswiki.osgeo.org/wiki/GRASS_GSoC_2024_Add_JSON_output" target="_blank">Add JSON output to different GRASS tools in C</a></h2>
+        
     </section>
 
     <section>
@@ -435,31 +483,40 @@ Finally, the latest community activities and funding opportunities will be prese
 
 
 <section>
-    Community
+    <h2>Community</h2>
 
     Community meeting Prague 2024 - results, thanks to supporters; 
-    new contributors: Edouard and Linda
-    Docs (conversion to md) 
-    STAC support on the way
+    New contributors with write access: Edouard and Linda
+    <!-- Docs (conversion to md) 
+    STAC support on the way -->
 </section>
 
 
 <section>
-    Governance
+    <h2>Governance</h2>
 
-    Upcoming PSC elections, 
-    mission and roadmap,
-    Formalization of procedures (version numbering and python adopted, draft RFC for releases, security doc), 
-    PR require a positive review to be merged 
+    <ul>
+        <li>PSC elections by the end of the year, get your IDs ready to vote :)</li>
+        <li>We have formalized our project mission and roadmap</li>
+        <li>Formalization of procedures (version numbering and python adopted, draft RFC for releases, security doc)</li>
+        <li>Formalized contribution procedures: PR require a positive review from someone with write access to be merged</li>
+    </ul>
+<!-- 
+Mission: Bring advanced geospatial technologies to the world.
+Release: Release one minor version per year and micro versions as needed).
+Distribute: Release and maintain a conda package.
+Integrate: Optimize the usage and integration of GRASS GIS in data science, extract-transform-load pipelines (ETL), cloud computing, interactive computational modeling, and scientific computing.
+Innovate: Improve the way GRASS GIS serves as a framework for innovative geospatial computing and modeling.
+Document: Ensure documentation is sufficiently detailed and up-to-date, including user manuals and tutorials.
+Grow: Foster community involvement by organizing yearly community meetings and promote smaller local events to reach isolated users and communities.
+Mentor: Continue to participate in mentoring programs to grow the base of contributors and promote inclusion  
+-->
 </section>
 
 
 <section>
     <section>
-        Funding
-
-        NSF
-        Sponsoring, Open collective 
+        <h2>Funding</h2>
     </section>   
 
     <section>
@@ -475,7 +532,7 @@ Finally, the latest community activities and funding opportunities will be prese
     </section>
 
     <section>
-        <h2>New Funding Options on OpenCollective</h2>
+        <h2>Funding Options on OpenCollective</h2>
         <ul>
             <li>
                 Donation (one-time, any amount), Supporter starts at 10 USD/month, Sponsor starts at 500 USD/year
@@ -483,9 +540,6 @@ Finally, the latest community activities and funding opportunities will be prese
             </li>
             <li>
                 Feedback? Talk to me about being part of the solution!
-            </li>
-            <li>
-                T-shirt fundraiser test: Ask me after the talk for details!
             </li>
         </ul>
         <img src="img/open_collective_qr.png" class="stretch">
@@ -495,10 +549,12 @@ Finally, the latest community activities and funding opportunities will be prese
 
 
 <section>
-    Support 
+    Get support 
 
-    Community 
+    Community
+    - Mailing list, chat, social media 
     Commercial
+    - companies
 </section>
 
 
@@ -534,7 +590,7 @@ Finally, the latest community activities and funding opportunities will be prese
                 <ul>
                     <li>geoprocessing engine</li>
                     <li>being a good neighbor in open source ecosystem</li>
-                    <li>documentation</li>
+                    <li>documentation and education</li>
                     <li>community engagement and promotion</li>
                 </ul>
             </li>
