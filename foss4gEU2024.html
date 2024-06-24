@@ -334,13 +334,15 @@ Finally, the latest community activities and funding opportunities will be prese
     <section>
         <h2>Tools</h2>
         
-        More machine learning in GRASS GIS!!
+        <h3>More machine learning in GRASS GIS!!</h3>
 
         <b>i.svm toolset</b>: Supervised classification with Support Vector Machines
+
         <ul>
             <li><a href="https://grass.osgeo.org/grass84/manuals/i.svm.train.html">i.svm.train</a></li>
             <li><a href="https://grass.osgeo.org/grass84/manuals/i.svm.predict.html">i.svm.predict</a></li>
         </ul>
+
         <img src="img/user_accuracy_svm.png" class="stretch">
         
         <small>by Maris Nartiss (<a href="https://doi.org/10.1111/tgis.13102">Nartiss & Melniks 2023</a>)</small>
@@ -349,7 +351,7 @@ Finally, the latest community activities and funding opportunities will be prese
     <section>
         <h2>Tools</h2>
 
-        More topology in GRASS GIS!!
+        <h3>More topology in GRASS GIS!!</h3>
         
         <a href="https://grass.osgeo.org/grass84/manuals/v.fill.holes.html">v.fill.holes</a>: Fill holes in areas by keeping only outer boundaries
 
@@ -361,7 +363,7 @@ Finally, the latest community activities and funding opportunities will be prese
     <section>
         <h2>Tools</h2>
 
-        Easier to connect GRASS with other tools within data science workflows!!
+        <h3>Easier to connect GRASS with other tools within data science workflows!!</h3>
 
         JSON output format support <code>(format="json")</code> in multiple tools (e.g., r.report, r.info, v.db.select, t.rast.list, etc.)
 
@@ -371,17 +373,21 @@ Finally, the latest community activities and funding opportunities will be prese
     <section>
         <h2>Tools</h2>
 
-        Revamped unique GRASS tools!
-        
-        <a href="https://grass.osgeo.org/grass84/manuals/r.horizon.html">r.horizon</a>: Output for multiple points, distances, and many other improvements
+        <h3>Revamped unique GRASS tools!</h3>        
+
+        <a href="https://grass.osgeo.org/grass84/manuals/r.horizon.html">r.horizon</a>: 
+        Output for multiple points, distances, and many other improvements
 
         <small>Anna Petrasova, funded by NSF Award #2322073, granted to Natrx, Inc.</small>
+
+        <!-- Any nice screenshot for this? -->
     </section>
 
     <section>
         <h2>API and Library changes</h2> 
         
-        <code>grass.script</code> Python package: Greatly simplified the creation of new projects in Python without a running session (no more chicken and egg problems)
+        <code>grass.script</code> Python package: Greatly simplified the creation of new projects in 
+        Python without a running session (no more chicken and egg problems)
         
         <pre><code data-trim data-noescape>
             import grass.script as gs
@@ -402,6 +408,7 @@ Finally, the latest community activities and funding opportunities will be prese
         <h2>API and Library changes</h2> 
         
         <code>grass.jupyter</code> Python package: 
+
         <ul>
             <li>New <code>grass.jupyter.SeriesMap</code> class for animating series of vectors or rasters</li>
             <li><code>ipyleaflet</code> integration to create a map in ipyleaflet and add GRASS data in a single line</li>
@@ -451,7 +458,7 @@ Finally, the latest community activities and funding opportunities will be prese
     <h2>New extensions</h2>
 
     <ul>
-        <li><a href="">r.flowaccumulation</a>: Calculates flow accumulation from a flow direction raster map using the Memory-Efficient Flow Accumulation (MEFA) parallel algorithm by Cho (2023).</li>
+        <li><a href="">r.flowaccumulation</a>: Calculates flow accumulation from a flow direction using the Memory-Efficient Flow Accumulation (MEFA) parallel algorithm by Cho (2023).</li>
         <li><a href="">r.fusion</a>: image fusion, generalized pan-sharpening, funded by mundialis GmbH & Co. KG.</li>
         <li><a href="">r.maxent.train</a> & <a href="">r.maxent.predict</a>: train and predict a Maxent model to create a suitability distribution maps.</li>
         <li>... plotting tools, and tools to streamline access to different types of data.</li>
@@ -527,10 +534,12 @@ Finally, the latest community activities and funding opportunities will be prese
 <section id="Mentoring">
     <section>
         <h2>Mentoring and Student Grants Program</h2>
+        
         <ul>
             <li><a href="https://grasswiki.osgeo.org/wiki/Student_Grants">Student grants</a> to contribute to GRASS GIS: 1 student 2023-2024. Call is open for this fall!</li></li>
             <li><a href="https://grasswiki.osgeo.org/wiki/Mentoring_Program">Mentoring</a> to integrate GRASS GIS into your workflows: 11 people on various topics. Call still open!</li>
         </ul>
+
         <img src="img/mentoring.jpg" class="stretch">
 
         <aside class="notes">
@@ -551,15 +560,14 @@ Finally, the latest community activities and funding opportunities will be prese
     <section>
         <h2><a href="https://grasswiki.osgeo.org/wiki/GRASS_GSoC_2024_EODAG_Support" target="_blank">Add EODAG support to GRASS GIS</a></h2> 
 
-        <a href="https://grass.osgeo.org/grass83/manuals/addons/i.eodag.html">i.eodag</a>: Downloads imagery datasets from various providers through the EODAG API
-
         <small>Student: Hamed Ashraf <br>Mentors: Luca Delucchi, Veronica Andreo, Stefan Blumentrath</small>
 
+        <a href="https://grass.osgeo.org/grass83/manuals/addons/i.eodag.html">i.eodag</a>: Downloads imagery datasets from various providers through the EODAG API
+        
         <pre><code data-trim data-noescape>
             v.extract input=urbanarea where="NAME = 'Durham'" output=durham
             
-            i.eodag -l start=2022-05-25 end=2022-06-01 clouds=30 \
-                map=durham dataset=S2_MSI_L2A provider=cop_dataspace
+            i.eodag -l start=2022-05-25 end=2022-06-01 clouds=30 map=durham dataset=S2_MSI_L2A provider=cop_dataspace
         </code>
     </section>
 
@@ -633,12 +641,16 @@ Finally, the latest community activities and funding opportunities will be prese
 
     <img src="img/grass_community_meeting_room.jpg" class="stretch">
 
+    <br>
+
     Thanks to our sponsors, individual and anonymous contributors!!
-    <img src="img/sponsors_2024.png" class="stretch">
+
+    <img src="img/sponsors_2024.png" width="500px">
     </section>
     
     <section>
         <h2>Most relevant results from the community meeting</h2>
+
         <ul>
             <li>Released GRASS 8.4. RC1</li>
             <li>Parallelization of more tools: v.surf.rst, r.texture and r.horizon</li>
@@ -647,8 +659,7 @@ Finally, the latest community activities and funding opportunities will be prese
             <li>GRASS-R integration: directly read GRASS data through the gdal-grass plugin</li>
             <li>Advanced in the conversion of manual pages to md</li>
             <li>Lots of CI improvements, issues and PRs cleanup, discussions, documenting procedures</li>
-            <li>Nix integration</li>
-            <li>New tutorials</li>
+            <li>Nix integration, new tutorials... </li>
         </ul>
         
         See more at: https://grasswiki.osgeo.org/wiki/GRASS_Community_Meeting_Prague_2024
@@ -671,7 +682,7 @@ Finally, the latest community activities and funding opportunities will be prese
 
 <section id="Funding">
     <section>
-        <h2>Funding</h2>
+        <h1>Funding</h1>
     </section>   
 
     <section>
@@ -723,7 +734,7 @@ Finally, the latest community activities and funding opportunities will be prese
 
 <section id="Get involved">
     <section>
-        <h2>Get involved!</h2>
+        <h1>Get involved!</h1>
 
         All contributions are welcome!
     </section>
@@ -809,14 +820,12 @@ Finally, the latest community activities and funding opportunities will be prese
         </small>
     </p>
     <p>
-            <small>
-                veroandreo&#64;gmail&#46;com,
-                <a href="https://twitter.com/VeronicaAndreo/">@VeronicaAndreo</a>, <a href="https://github.com/veroandreo/">@veroandreo</a>
-                <br>
-                <small>
-                    <a href="https://veroandreo.github.io/grass-gis-talks">veroandreo.github.io/grass-gis-talks</a>
-                </small>
-            </small>
+        <small>
+            veroandreo&#64;gmail&#46;com,
+            <a href="https://twitter.com/VeronicaAndreo/">@VeronicaAndreo</a>, <a href="https://github.com/veroandreo/">@veroandreo</a>
+            <br>
+            <small><a href="https://veroandreo.github.io/grass-gis-talks">veroandreo.github.io/grass-gis-talks</a></small>
+        </small>
     </p>
 </section>
 
