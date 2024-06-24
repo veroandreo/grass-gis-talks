@@ -233,9 +233,7 @@ h3.shadow {
 
 .reveal code {
   font-family: monospace;
-  color: white;
-  background-color: #3a3939;
-  padding: 10px;
+  padding: 0;
 }
 
 .reveal pre code {
