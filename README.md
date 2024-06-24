@@ -1,6 +1,6 @@
 # GRASS GIS Talks
 
-* FOSS4G Europe - Tartu 2024: [State of GRASS GIS](https://veroandreo.github.io/grass-gis-talks/foss4gEU2024.html/)
+* FOSS4G Europe - Tartu 2024: [State of GRASS GIS](https://veroandreo.github.io/grass-gis-talks/foss4gEU2024.html#/)
 * Open Data Science Europe - Wageningen 2021: [GRASS GIS 8: From Desktop to Big Data Cubes](https://veroandreo.github.io/grass-gis-talks/wageningen2021.html)
 
 ## Authors, Copyright, and License
