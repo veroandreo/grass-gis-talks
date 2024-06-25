@@ -371,10 +371,7 @@ Finally, the latest community activities and funding opportunities will be prese
         <h2>Tools</h2>
 
         <h3>Streamline the connection of GRASS and other tools within data science workflows!!</h3>
-
-        <p>JSON output format support <code>(format="json")</code> in multiple tools 
-            (e.g., r.report, r.info, v.db.select, t.rast.list, etc.)
-        </p>
+     
         <pre><code>
             r.info elevation format=json
             {
@@ -396,7 +393,9 @@ Finally, the latest community activities and funding opportunities will be prese
             }
         </code></pre>
 
-        <small>Many more to come! Wait for the GSoC slides <i class="fa fa-grin-wink"></i></small>
+        <p>JSON output format support <code>(format="json")</code> in multiple tools 
+            (e.g., r.report, r.info, v.db.select, t.rast.list, etc.)</p>
+
     </section>
 
     <section>
@@ -415,9 +414,9 @@ Finally, the latest community activities and funding opportunities will be prese
     <section>
         <h2>API and Library changes</h2> 
         
-        <p><code>grass.script</code> Python package: 
+        <p><code>grass.script</code> Python package: </p>
         
-        Greatly simplified the creation of new projects in 
+        <p>Greatly simplified the creation of new projects in 
         Python without a running session (no more chicken and egg problems)</p>
         
         <pre><code data-trim data-noescape>
@@ -492,8 +491,8 @@ Finally, the latest community activities and funding opportunities will be prese
     <h2>New extensions</h2>
 
     <ul>
-        <img src="https://grass.osgeo.org/grass83/manuals/addons/t_rast_line_07.png" float="right" width="120px">
         <li><a href="https://grass.osgeo.org/grass-stable/manuals/addons/r.flowaccumulation.html">r.flowaccumulation</a>: Calculates flow accumulation from a flow direction using the Memory-Efficient Flow Accumulation (MEFA) parallel algorithm by Cho (2023).</li>
+        <img src="https://grass.osgeo.org/grass83/manuals/addons/t_rast_line_07.png" float="right" width="200px">
         <li><a href="https://grass.osgeo.org/grass-stable/manuals/addons/r.fusion.html">r.fusion</a>: image fusion, generalized pan-sharpening, funded by mundialis GmbH & Co. KG.</li>
         <li><a href="https://grass.osgeo.org/grass-stable/manuals/addons/r.maxent.train.html">r.maxent.train</a> & <a href="https://grass.osgeo.org/grass-stable/manuals/addons/r.maxent.predict.html">r.maxent.predict</a>: train and predict a Maxent model to create a suitability distribution maps.</li>
         <li>... plotting tools, and tools to streamline access to different types of data.</li>
@@ -508,6 +507,8 @@ Finally, the latest community activities and funding opportunities will be prese
 <section id="Code quality and security">
 <section>
     <h1>Code quality and security</h1>
+
+    <i class="fa fa-square-check fa-4x"></i>
 
     <aside class="notes">
         Code quality and security tools run in CI with every PR/commit. 
@@ -566,6 +567,8 @@ Finally, the latest community activities and funding opportunities will be prese
         <li>Advancements towards compliance with Filesystem Hierarchy Standard (FSH)</li>
         <li>GRASS conda package on the way...</li>
     </ul> 
+
+    <img src="img/cmake_pr.png" class="stretch">
 </section>
 
 
@@ -608,8 +611,9 @@ Finally, the latest community activities and funding opportunities will be prese
         <pre><code data-trim data-noescape>
             v.extract input=urbanarea where="NAME = 'Durham'" output=durham
             
-            i.eodag -l start=2022-05-25 end=2022-06-01 clouds=30 map=durham dataset=S2_MSI_L2A provider=cop_dataspace
-        </code>
+            i.eodag -l start=2022-05-25 end=2022-06-01 clouds=30 \
+                    map=durham dataset=S2_MSI_L2A provider=cop_dataspace
+        </code></pre>
     </section>
 
 
@@ -675,7 +679,7 @@ Finally, the latest community activities and funding opportunities will be prese
     <h2>Community growth</h2>        
 
     <ul>
-        <img src="img/grass_baby.png" float="right">
+        <img src="img/grass_baby.png" float="right" width="150px">
         <li>Two new contributors with write access: Edouard Choiniere and Linda Karlovska. Welcome!!</li>
         <li>Three new GRASS GIS babies! Congratulations!!</li>
     </ul>
@@ -820,7 +824,7 @@ Finally, the latest community activities and funding opportunities will be prese
 
         <ul>
             <li>Write tutorials for different applications or showcase your GRASS use cases</li>
-            <li>Currently collecting them at: https://github.com/ncsu-geoforall-lab/tutorials</li>
+            <li>Currently collecting them at: <a href="https://github.com/ncsu-geoforall-lab/tutorials">ncsu-geoforall-lab/tutorials</a></li>
         </ul>
 
         <img src="img/tutorials.png" class="stretch">
@@ -830,6 +834,9 @@ Finally, the latest community activities and funding opportunities will be prese
     
     <section>
         <h2>Sponsoring</h2>
+
+        <img src="img/open_collective_top.png" class="stretch">
+
         <div class="columns">
             <div class="column" style="width:55%">
                 <br>
@@ -851,10 +858,12 @@ Finally, the latest community activities and funding opportunities will be prese
     <section>
         <h1>Get in touch with us!</h1>
         <br>
-        <i class="fab fa-x-twitter"></i><a href="https://twitter.com/grassgis"> @GRASSGIS</a>,  
-        <i class="fab fa-mastodon"></i><a href="https://fosstodon.org/@grassgis"> @grassgis</a>,  
-        <i class="fab fa-gitter"><a href="https://app.gitter.im/#/room/#grassgis_community:gitter.im"> grassgis/community chat</a></i>, 
+        <i class="fa fa-x-twitter"></i><a href="https://twitter.com/grassgis"> @GRASSGIS</a>,  
+        <i class="fa fa-mastodon"></i><a href="https://fosstodon.org/@grassgis"> @grassgis</a>, <br> 
+        <i class="fa fa-gitter"><a href="https://app.gitter.im/#/room/#grassgis_community:gitter.im"> grassgis/community chat</a></i>, <br>
         <i class="fa fa-envelope"></i><a href="https://lists.osgeo.org/mailman/listinfo/grass-user"> grass-user mailing list</a>
+
+        Pick the <a href="https://grass.osgeo.org/support/community/">channel</a> you prefer!
     </section>
 </section>
 
@@ -867,12 +876,10 @@ Finally, the latest community activities and funding opportunities will be prese
         </small>
     </p>
 
-    <small>
-        veroandreo&#64;gmail&#46;com,            
-        <a href="https://twitter.com/VeronicaAndreo/">@VeronicaAndreo</a>, <a href="https://github.com/veroandreo/">@veroandreo</a>
-        <br>
+    <p><small>
+        <i class="fa fa-envelope"></i> veroandreo&#64;gmail&#46;com
         <small><a href="https://veroandreo.github.io/grass-gis-talks">veroandreo.github.io/grass-gis-talks</a></small>
-    </small>
+    </small></p>
 </section>
 
 
