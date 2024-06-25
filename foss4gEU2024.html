@@ -159,7 +159,7 @@ Finally, the latest community activities and funding opportunities will be prese
 -->
 
 
-<section>
+<section id="Front page">
     <h1>Status of GRASS GIS project</h1>
     <!-- <h1 style="margin-bottom: 1.5em">Middlelife identity crisis or opportunity?</h1> -->
 
@@ -186,7 +186,7 @@ Finally, the latest community activities and funding opportunities will be prese
 </section>
 
 
-<section>
+<section id="Presenter">
 <h2>Veronica (Vero) Andreo</h2>
 <ul>
     <img src="img/profile.png" class="bio-img">
@@ -285,6 +285,8 @@ Finally, the latest community activities and funding opportunities will be prese
     <h1>GRASS is all of that!</h1>
 
     <h2>Robustness, Stability, Versatility, Scientific foundations</h2>
+
+    <img src="img/grass_gis.svg" width="150px">
 </section>
 
 </section>
@@ -311,7 +313,7 @@ Finally, the latest community activities and funding opportunities will be prese
         </li>
     </ul>
     <br>
-    <img src="img/splash_screen.png" class="stretch">
+    <img src="img/splash_screen.png" width="500px">
 
     <aside class="notes">
         major.minor.micro &ndash; semantic versioning:
@@ -337,12 +339,13 @@ Finally, the latest community activities and funding opportunities will be prese
         
         <h3>More machine learning in GRASS GIS!!</h3>
 
-        <b>i.svm toolset</b>: Supervised classification with Support Vector Machines
+        <p><b>i.svm toolset</b>: Supervised classification with Support Vector Machines
 
         <ul>
-            <li><a href="https://grass.osgeo.org/grass84/manuals/i.svm.train.html">i.svm.train</a></li>
-            <li><a href="https://grass.osgeo.org/grass84/manuals/i.svm.predict.html">i.svm.predict</a></li>
+            <li><a href="https://grass.osgeo.org/grass84/manuals/i.svm.train.html">i.svm.train</a>: Train a Support Vector Machine</li>
+            <li><a href="https://grass.osgeo.org/grass84/manuals/i.svm.predict.html">i.svm.predict</a>: Predict with a Support Vector Machine</li>
         </ul>
+        </p>
 
         <img src="img/user_accuracy_svm.png" class="stretch">
         
@@ -354,7 +357,8 @@ Finally, the latest community activities and funding opportunities will be prese
 
         <h3>More topology in GRASS GIS!!</h3>
         
-        <a href="https://grass.osgeo.org/grass84/manuals/v.fill.holes.html">v.fill.holes</a>: Fill holes in areas by keeping only outer boundaries
+        <p><a href="https://grass.osgeo.org/grass84/manuals/v.fill.holes.html">v.fill.holes</a>: 
+            Fill holes in areas by keeping only outer boundaries</p>
 
         <img src="img/v_fill_holes.png" class="stretch">
         
@@ -364,9 +368,31 @@ Finally, the latest community activities and funding opportunities will be prese
     <section>
         <h2>Tools</h2>
 
-        <h3>Easier to connect GRASS with other tools within data science workflows!!</h3>
+        <h3>Streamline the connection of GRASS and other tools within data science workflows!!</h3>
 
-        <p>JSON output format support <code>(format="json")</code> in multiple tools (e.g., r.report, r.info, v.db.select, t.rast.list, etc.)</p>
+        <p>JSON output format support <code>(format="json")</code> in multiple tools 
+            (e.g., r.report, r.info, v.db.select, t.rast.list, etc.)
+        </p>
+        <pre><code>
+            r.info elevation format=json
+            {
+                "north": 228500,
+                "south": 215000,
+                "nsres": 10,
+                "east": 645000,
+                "west": 630000,
+                "ewres": 10,
+                "rows": 1350,
+                "cols": 1500,
+                "cells": 2025000,
+                "datatype": "FCELL",
+                "ncats": 255,
+                "min": 55.578792572021484,
+                "max": 156.32986450195312,
+                "map": "elevation",
+                ...
+            }
+        </code></pre>
 
         <small>Many more to come! Wait for GSoC slides <i class="fa fa-grin-wink"></i></small>
     </section>
@@ -387,7 +413,9 @@ Finally, the latest community activities and funding opportunities will be prese
     <section>
         <h2>API and Library changes</h2> 
         
-        <p><code>grass.script</code> Python package: Greatly simplified the creation of new projects in 
+        <p><code>grass.script</code> Python package: 
+        
+        Greatly simplified the creation of new projects in 
         Python without a running session (no more chicken and egg problems)</p>
         
         <pre><code data-trim data-noescape>
@@ -643,9 +671,8 @@ Finally, the latest community activities and funding opportunities will be prese
     <section>
     <h2>Community growth</h2>        
 
-    <img src="img/grass_baby.png" class="bio-img">
-
     <ul>
+        <img src="img/grass_baby.png" class="bio-img">
         <li>Two new contributors with write access: Edouard and Linda</li>
         <li>Three new GRASS babies! Congratulations!!</li>
     </ul>
