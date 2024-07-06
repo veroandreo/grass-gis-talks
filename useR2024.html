@@ -169,7 +169,7 @@ spatial data engineering and data science workflows for scientific and operation
         <a href="http://www.ncsu.edu/" title="North Carolina State University">NC State University</a>
     </p>
 
-    <img src="img/grass_gis.svg" height="200px"> <i class="fa fa-heart fa-4x fa-red"></i> <img src="img/R_logo.svg" height="200px">
+    <img src="img/grass_gis.svg" height="200px"> <i class="fa fa-heart fa-6x"></i> <img src="img/R_logo.svg" height="160px">
 
     <p><small>useR! Conference, Salzburg, July 8-11, 2024</small></p>
     <p>
@@ -279,19 +279,19 @@ spatial data engineering and data science workflows for scientific and operation
         <div class="column" style="width:23%;">
             Time series support
             
-            <img src="img/tgrass_flowchart.png">
+            <img src="https://grass.osgeo.org/grass83/manuals/addons/t_rast_line_07.png">
         </div>
 
         <div class="column" style="width:24%;">
             Remote Sensing
 
-            <img src="https://grass.osgeo.org/learn/gallery/#&gid=1&pid=112">
+            <img src="https://github.com/veroandreo/grass_ncsu_2023/blob/main/assets/img/studio/lst_north_italy_2014.png">
         </div>
 
         <div class="column" style="width:24%;">
             Hydrology & Geomorphology
 
-            <img src="https://grass.osgeo.org/learn/gallery/#&gid=1&pid=60">
+            <img src="https://grass.osgeo.org/grass83/manuals/r_sim_water.png">
         </div>
 
         <div class="column" style="width:24%;">
@@ -303,34 +303,85 @@ spatial data engineering and data science workflows for scientific and operation
 </section>
 
 <section>
-    <h2>Many already parallelized tools</h2>
-    <ul>
-        <li>
-            Core tools:
-            <small>
-            r.series, r.texture, r.horizon, r.neighbors, r.patch, r.mfilter, r.slope.aspect, r.sun, v.surf.rst, r.sim.sediment, r.sim.water, most temporal tools
-            </small>
-        </li>
-        <li>
-            Addon tools:
-            <small>
-            r.flowaccumulation, r.sun.daily, r.in.usgs,
-            r.mapcalc.tiled, t.rast.what.aggr,
-            r.connectivity.corridors, r.viewshed.exposure,
-            and several more
-            <!-- 20 more total -->
-            </small>
-        </li>
-        <li>
-            Parallelizing custom Python scripts:
-            <ul>
-                <li>Data parallelization: GridModule</li>
-                <li>Task parallelization: multiprocessing, ParallelModuleQueue</li>
-            </ul>
-        </li>
-    </ul>
-    <img src="img/parallel_tools.png" alt="Data and task based parallelization" class="stretch">
+    <h2>Tools with parallel support</h2>
+    <div class="flexcontainer">
+        <div class="flexbox">
+            <img src="img/module_rslopeaspect.png">
+            <span>r.slope.aspect</span>
+          </div>
+        <div class="flexbox">
+          <img src="img/module_rneighbors.png">
+          <span>r.neighbors</span>
+        </div>
+        <div class="flexbox">
+          <img src="img/module_rmfilter.png">
+          <span>r.mfilter</span>
+        </div>
+        <div class="flexbox">
+          <img src="img/module_rseries.png">
+          <span>r.series</span>
+        </div>
+        <div class="flexbox">
+            <img src="img/module_rpatch.png">
+            <span>r.patch</span>
+        </div>
+        <div class="flexbox">
+            <img src="img/module_rsun.png">
+            <span>r.sun</span>
+        </div>
+        <div class="flexbox">
+            <img src="img/module_vsurfrst.png">
+            <span>v.surf.rst</span>
+        </div>
+        <div class="flexbox">
+            <img src="img/module_rsimwater.png">
+            <span>r.sim.water</span>
+        </div>
+        <div class="flexbox">
+            <img src="img/module_rsimsediment.png">
+            <span>r.sim.sediment</span>
+        </div>
+        <div class="flexbox">
+          <img src="img/module_rneighbors.png">
+          <span>r.resamp.interp</span>
+        </div>
+        <div class="flexbox">
+          <img src="img/module_rmfilter.png">
+          <span>r.resamp.filter</span>
+        </div>
+        <div class="flexbox">
+            <img src="img/module_runivar.png">
+            <span>r.univar</span>
+          </div> 
+      </div>
+<br>
+      <small>And more at <a href="https://grass.osgeo.org/grass-stable/manuals/keywords.html#parallel">
+        grass.osgeo.org/grass-stable/manuals/keywords.html#parallel</a></small>
 </section>
+
+<section>
+    <h2>API tooling for parallelizing custom Python scripts</h2>
+
+        <ul>
+            <li>Data parallelization: GridModule</li>
+            <li>Task parallelization: multiprocessing, ParallelModuleQueue</li>
+        </ul>
+
+        <pre><code data-trim data-noescape>
+            from grass.pygrass.modules.grid import GridModule
+        
+            grd = GridModule("v.to.rast", input="roads", output="roads",
+                             use="val", processes=4)
+            grd.run()
+            </code></pre>
+
+            <pre><code data-trim data-noescape>
+            r.mapcalc.tiled "log_dist = if (dist == 0, 0, log(dist))" nprocs=4
+            </code></pre>
+
+        <img src="img/tiling2.png" class="stretch">
+</section>
+
 
 <section>
     <h2>Multi-threading with OpenMP</h2>
@@ -581,8 +632,8 @@ spatial data engineering and data science workflows for scientific and operation
         <li>Let's focus on enhancing bridges!</li>
     </ul>
 
-    <i class="fa fa-bridge fa-6"></i>
-    
+    <img src="https://a1.cdn.japantravel.com/photo/64558-218635/800!/5-of-japan-s-most-beautiful-bridges-218635.jpg" class="stretch">
+
 </section>
 
 
