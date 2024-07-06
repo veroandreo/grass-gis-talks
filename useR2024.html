@@ -159,7 +159,7 @@ spatial data engineering and data science workflows for scientific and operation
     <p style="margin-top: 0.5em">
         <a href="http://veroandreo.gitlab.io/" style="font-weight: bold">
             Veronica Andreo
-        </a>
+        </a> and the GRASS GIS community
     </p>
     <p class="title-foot">
         <a href="http://geospatial.ncsu.edu/geoforall/" title="NCSU GeoForAll Lab">NCSU GeoForAll Lab</a>
@@ -168,7 +168,7 @@ spatial data engineering and data science workflows for scientific and operation
         <br>
         <a href="http://www.ncsu.edu/" title="North Carolina State University">NC State University</a>
     </p>
-    <img src="img/grass_gis.svg" class="stretch">
+    <img src="img/grass_gis.svg" class="stretch"><i class="fa fa-heart fa-4x"></i><img src="img/R_logo.svg" class="stretch">
     <p><small>useR! Conference, Salzburg, July 8-11, 2024</small></p>
     <p>
         <a href="https://veroandreo.github.io/grass-gis-talks/useR2024.html">veroandreo.github.io/grass-gis-talks</a>
@@ -176,50 +176,65 @@ spatial data engineering and data science workflows for scientific and operation
 
 
 <section>
-<h2>About the speaker</h2>
-<ul>
-    <li>Visiting scholar at NC State's Center for Geospatial Analytics
-        <img src="img/profile.png" class="bio-img">
-    <li>Lic. &amp; PhD in Biology, University of Rio Cuarto (Argentina),
-        MS in Applications of the Spatial Information, University of Cordoba (Argentina)
-    <li>GRASS GIS: Development Team, PSC chair
-</ul>
+    <img src="img/alf.png" class="stretch">
 </section>
 
 
-<section>
+<section id="Presenter">
+    <h2>Who am I</h2>
+    <ul>
+        <img src="img/profile.png" class="bio-img">
+        <li>Visiting scholar at NC State's <a href="http://geospatial.ncsu.edu/" title="NCSU Center for Geospatial Analytics">Center for Geospatial Analytics</a>
+        <li>Lic. &amp; PhD in Biology, MSc in Applications of the Spatial Information
+        <li>Researcher &amp; lecturer at <a href="https://ig.conae.unc.edu.ar/" target="_blank">Gulich Institute</a></li>
+        <li>GRASS GIS: Development Team, PSC chair
+        <li>OSGeo: Charter member</li>
+    </ul>
+</section>
+
+
+<section id="What's GRASS">
     <h1>What is GRASS GIS?</h1>
 </section>
 
+<section>
+    <h2>What is GRASS GIS?</h2>
+    <p>Geek open-source command line GIS</p>
+    <img src="img/grass84_cli.png" class="stretch">
+</section>
 
 <section>
     <h2>What is GRASS GIS?</h2>
     <p>Open-source desktop GIS</p>
-    <img src="img/gui_pink_viewshed.png" class="stretch">
+    <img src="img/grass_gui_multiple_map_displays.png" class="stretch">
 </section>
 
 <section>
     <h2>What is GRASS GIS?</h2>
     <p>Processing backend in QGIS</p>
-    <img src="https://media.githubusercontent.com/media/baharmon/baharmon.github.io/master/images/governors-island/grass-in-qgis.jpg" class="stretch">
+    <img src="img/grass-in-qgis.jpg" class="stretch">
     <small>Image source: <a href="https://baharmon.github.io/grass-in-qgis">baharmon.github.io/grass-in-qgis</a></small>
+    
+    <aside class="notes">
+        Not a QGIS plugin! GRASS provides tools, models and algorithms to QGIS.
+    </aside>
 </section>
 
 <section>
     <h2>What is GRASS GIS?</h2>
-    <p>Geospatial data analytics tool in RStudio</p>
-    <img src="RwithinGRASS_and_Rstudio_from_grass.png" class="stretch">
+    <p>Geovisualization and data analytics tool in R or quarto notebooks</p>
+    <img src="img/grass_within_rstudio.png" class="stretch">
 </section>
 
 <section>
     <h2>What is GRASS GIS?</h2>
-    <p>Geovisualization and data analytics tool in a Python notebook</p>
+    <p>Geovisualization and data analytics tool in Python notebooks</p>
     <img src="img/jupyter3.png" class="stretch">
 </section>
 
 <section>
     <h2>What is GRASS GIS?</h2>
-    <p>Geoprocessing engine running in HPC environment</p>
+    <p>Geoprocessing engine running in an HPC environment</p>
     <img src="img/HPC_interaction.png" class="stretch">   
 </section>
 
@@ -237,304 +252,61 @@ spatial data engineering and data science workflows for scientific and operation
 </section>
 
 <section>
-    <h2>GRASS GIS is command-line only, no?</h2>
-    <img src="img/grass_cli.png" class="stretch">
-</section>
-
-
-<section>
-    <h1>Interface options</h1>
-</section>
-
-
-<section>
-    <h2>Python</h2>
-    Python API comes with GRASS GIS.
+    <h1>GRASS is all of that!</h1>
     <br>
-    <img src="img/jupyter_interactive_viewshed.png" class="stretch">
-</section>
+    <h2>Robustness, Innovation with Stability, Versatility, Scientific foundations</h2>
 
-<section>
-    <h2>R</h2>
-    rgrass package to use GRASS GIS from R is on CRAN.
-    <!-- Search all packages already using GRASS -->
-    <br>
-    <img src="img/splash_screen.png" class="stretch">
+    <img src="img/grass_gis.svg" width="150px">
 </section>
 
 
 <section>
-    <h2>QGIS</h2>
-    GRASS tools are available through the Processing Plugin<br>(GUI and Python).
-    <br>
-    <img src="img/qgis_processing.png" class="stretch">
+    <h1>Why using GRASS?</h1>
 </section>
 
-
 <section>
-    <h2>Command Line</h2>
+    <h2>Mature and robust geoprocessing engine with unique tools for diverse applications</h2>
     <ul>
-        <li>Interactive shell</li>
-        <li>One-time execution or batch usage with <code>--exec</code></li>
+        <li>Processing tools:
+            <b>500+</b> <a href="https://grass.osgeo.org/grass-stable/manuals/full_index.html">in core</a>,
+            <b>400+</b> <a href="https://grass.osgeo.org/grass-stable/manuals/addons/">addons</a></li>
     </ul>
-    <br>
-    <img src="img/grass_cli.png" class="stretch">
-</section>
 
+    <div class="columns">
+        <div class="column" style="width:24%;">
+            Time series support
+        </div>
 
-<section>
-    <h2>Cloud</h2>
-    <ul>
-        <li>CLI</li>
-        <li>Python</li>
-        <li>actinia</li>
-        <li>OpenPlains</li>
-    </ul>
-    <br>
-    <img src="img/actinia_logo.svg" class="stretch">
-</section>
+        <div class="column" style="width:24%;">
+            Remote Sensing
+        </div>
 
+        <div class="column" style="width:24%;">
+            Hydrology & Geomorphology
+        </div>
 
-<section>
-    <h1>Graphical User Interface</h1>
-</section>
-
-
-<section>
-    <h2>Multiple windows</h2>
-    Multiple windows was the only option.
-    <p>
-        Still available as before, but&hellip;
-    </p>
-    <img src="img/grass_gis_v7.2.1.png" class="stretch">
+        <div class="column" style="width:24%;">
+            Simulations
+        </div>
+    </div>
 </section>
 
 <section>
-    <h2>Single-window Interface</h2>
-    Now single-window interface is the default.
-    <img src="img/gui_orange_viewsheds_buffer.png" class="stretch">
-</section>
-
-
-<section>
-    <h2>Time to clear up some misconceptions related to age</h2>
-</section>
-
-
-<section>
-    <h1>Funding</h1>
-</section>
-
-
-<section>
-    <h2>It’s been around for long, so it must be well-funded</h2>
-</section>
-
-
-<section>
-    <h2>How people imagine a GRASS developer</h2>
-    <br>
-    <img src="img/funded_professor.jpg" alt="Person at a table working on laptop with file cabinets or submitted and funded proposals" class="stretch">
-    <p>
-        <small>
-            Well-funded professor thinking about new algorithms
-        </small>
-    </p>
-</section>
-
-
-<section>
-    <h2>The real GRASS developer</h2>
-    <br>
-    <img src="img/busy_parent.jpg" alt="Person at a table working on laptop and two shouting children" class="stretch">
-    <p>
-        <small>
-            Busy parent debugging some code
-        </small>
-    </p>
-</section>
-
-
-<section>
-    <img src="img/drawing_the_parent_image.jpg" class="stretch">
-    <p>
-        <small>
-            When I made the image
-        </small>
-    </p>
-</section>
-
-
-<section>
-    <h2>NSF grant lead by NC State</h2>
-    <ul>
-        <li>NSF grant awarded to NC State, ASU, NMSU, Yale</li>
-        <li>to enhance infrastructure</li>
-        <li>to revise contributing guidelines</li>
-        <li>to support community building</li>
-    </ul>
-    <p>Note: The NSF program is aiming at sustainability, not adding features or fix bugs.</p>
-    <img src="img/nsf_grant_announcement.png" class="stretch">
-</section>
-
-
-<section>
-    <h2>New Funding Options on OpenCollective</h2>
-    <ul>
-        <li>
-            Donation (one-time, any amount), Supporter starts at 10 USD/month, Sponsor starts at 500 USD/year
-            <img src="img/open_collective_top.png">
-        </li>
-        <li>
-            Feedback? Talk to me about being part of the solution!
-        </li>
-        <li>
-            T-shirt fundraiser test: Ask me after the talk for details!
-        </li>
-    </ul>
-    <img src="img/open_collective_qr.png" class="stretch">
-</section>
-
-
-<section>
-    <img src="img/open_collective_qr.png" class="stretch">
-</section>
-
-
-<section>
-    <h1>Releases</h1>
-</section>
-
-
-
-<section>
-    <h2>There are no new releases, or?</h2>
-    <ul>
-        <li>
-            8.3.1 Current, October 2023
-            <small>Current version for everyday user</small>
-        </li>
-        <li>
-            8.4.0 Preview, Daily
-            <small>Latest reviewed functional code</small>
-        </li>
-        <li>
-            7.8.8 Legacy, August 2023
-            <small>Maintained legacy version for some production systems</small>
-        </li>
-    </ul>
-    <br>
-    <img src="img/splash_screen.png" class="stretch">
-</section>
-
-
-<section>
-    <h2>Minor Releases Bring New Things: T or F?</h2>
-</section>
-
-
-<section>
-    <h2>Minor Releases</h2>
-    <ul>
-        <li>major.minor.micro
-            <ul>
-                <li>micro (x.y.z) brings fixes,</li>
-                <li>minor (x.y) brings features,</li>
-                <li>major (x) brings features and possibly backward incompatible changes</li>
-            </ul>
-        </li>
-    </ul>
-    <br>
-    <img src="img/hexagons_3d_white_outlier.png" class="stretch">
-</section>
-
-
-<section>
-    <h1>Code</h1>
-</section>
-
-
-<section>
-    <h2>C and C++ Code Quality</h2>
-    <ul>
-        <li>Issues reported by GCC and Clang such as dangling-else, discarded-qualifiers, format, &hellip; fixed.</li>
-        <li>Even more to come in 2024.</li>
-    </ul>
-    <br>
-    <img src="img/code_in_qtcreator.png" class="stretch">
-</section>
-
-
-<section>
-    <h2>Python</h2>
-    <ul>
-        <li>Code formatted with Black.</li>
-        <li>Flake8 enabled, 2/3 fixed.</li>
-        <li>Pylint partially enabled.</li>
-        <li>Aiming at close-to-default configuration for 2024.</li>
-    </ul>
-    <br>
-    <img src="img/code_in_vscodium.png" class="stretch">
-</section>
-
-
-<section>
-    <h1>Features</h1>
-    Features long-requested from industry now available and mature
-    (and usually overlooked by desktop users).
-</section>
-
-
-<section>
-    <h2>Managing GRASS session in Python</h2>
-    Revamped GRASS session makes it easier to use GRASS tools from Python.
-    <br>
-    <img src="img/python_session.png" class="stretch">
-</section>
-
-
-<section>
-    <h2>Command line batch mode with <code>--exec</code></h2>
-    Streamlined usage of GRASS tools through system calls.
-    <pre style="font-size: 94%;">grass /grassdata/nc_spm/work1 --exec \
-        r.viewshed input=elevation \
-        output=viewshed coordinates=642964,222890
-    </pre>
-</section>
-
-
-<section>
-    <h2>Command Line Description with <code>--json</code></h2>
-    <ul>
-        <li>Translates command line parameters to JSON.</li>
-        <li>Used by actinia to integrate with GRASS GIS.</li>
-        <li>Seeking feedback for other use-cases.</li>
-    </ul>
-    <pre style="font-size: 94%;">r.viewshed \
-        input=elevation \
-        output=viewshed \
-        coordinates=642964,222890 \
-        --json
-    </pre>
-</section>
-
-
-<section>
-    <h2>More parallel tools</h2>
+    <h2>Many already parallelized tools</h2>
     <ul>
         <li>
             Core tools:
             <small>
-            r.series, r.neighbors, r.patch, r.mfilter, r.slope.aspect, r.sun, v.surf.rst, r.sim.sediment, r.sim.water
+            r.series, r.texture, r.horizon, r.neighbors, r.patch, r.mfilter, r.slope.aspect, r.sun, v.surf.rst, r.sim.sediment, r.sim.water, most temporal tools
             </small>
         </li>
         <li>
             Addon tools:
             <small>
-            r.sun.daily, r.in.usgs,
+            r.flowaccumulation, r.sun.daily, r.in.usgs,
             r.mapcalc.tiled, t.rast.what.aggr,
             r.connectivity.corridors, r.viewshed.exposure,
-            and <b>13</b> more
+            and several more
             <!-- 20 more total -->
             </small>
         </li>
@@ -549,63 +321,268 @@ spatial data engineering and data science workflows for scientific and operation
     <img src="img/parallel_tools.png" alt="Data and task based parallelization" class="stretch">
 </section>
 
-
 <section>
-    <h2>Community Meeting 2023</h2>
-    GRASS GIS birthday celebrated by advancing CMake build, 8.3.0 release, &hellip;
-    <br>
-    <img src="img/community_prague_2023_room.jpg" class="stretch">
-    <small><a href="https://grass.osgeo.org/news/2023_08_13_grass_community_meeting_prague_june_2023_report/">grass.osgeo.org &gt; News &gt; Report of the GRASS GIS Community Meeting in Prague</a></small>
-    <aside class="notes">This talk will also report on GRASS GIS Community Meeting 2023 in Prague where the participants celebrated the 40th birthday of GRASS GIS by contributing more code.</aside>
-</section>
-
-
-<section>
-    <h2>Mentoring and Student Grants Program</h2>
+    <h2>Multi-threading with OpenMP</h2>
     <ul>
-        <li><a href="https://grasswiki.osgeo.org/wiki/Mentoring_Program">Mentoring</a> to integrate GRASS GIS into your workflows</li>
-        <li><a href="https://grasswiki.osgeo.org/wiki/Student_Grants">Student grants</a> to contribute to GRASS GIS</li>
+        <li>More tasks done in parallel in the same tool</li>
+        <li><code>nprocs</code> specifies number of cores (processes, threads)</li>
+        <li><code>memory</code> specifies RAM in MB</li>
+        <li><em>Performance</em> section in documentation describes the behavior</li>
     </ul>
-    <img src="img/community_prague_2023_laptop.jpg" class="stretch">
+    <img src="img/openmp_r_series_section.png" class="stretch">
+</section>
+
+<section>
+    <h2>HPC ready</h2>
+    <ul>
+        <li><a href="https://github.com/ncsu-geoforall-lab/grass-gis-on-hpc-henry2">Recipes for High Performance Computing setups</a></li>
+        <li>Better integration with conda environments</li>
+        <li>Reduced potential for race conditions</li>
+        <li>Easier to create parallel workflows</li>
+    </ul>
+    <img src="img/skyview.png" class="stretch">
+    <small>by Vaclav Petras, Markus Neteler, Nicklas Larsson, &hellip;</small>
+</section>
+
+<section>
+    <h2>Optimized for large data</h2>
+
+    <img src="img/big_files.jpg" class="stretch">
+</section>
+
+<section>
+    <h2>Streamlined access to data of different sources</h2>
+    <p>
+        Automated download and import of common datasets
+        <small>
+            i.eodag, i.sentinel, i.modis, i.landsat, r.in.usgs, r.in.nasadem, m.crawl.thredds, t.rast.import.netcdf, t.stac (on the way), &hellip;
+        </small>
+    </p>
+    <img src="img/usgs_ned_naip_3d.png" class="stretch">
+    <p>
+        <small>
+            by
+            Fondazione Edmund Mach,
+            OpenGeoLabs,
+            mundialis
+            GSoC,
+            NC&nbsp;State University,
+            CONICET,
+            Norwegian Institute for Nature Research,
+            &hellip;
+        </small>
+    </p>
+</section>
+
+
+<section id="R packages using GRASS">
+    <h1>R packages using GRASS in the background</h1>
+
+    <ul>
+        <li><a href="https://glowabio.github.io/hydrographr/">hydrographr</a>: ollection of R function wrappers for GDAL and GRASS GIS 
+            functions to efficiently work with <a href="https://essd.copernicus.org/articles/14/4525/2022/essd-14-4525-2022.html">Hydrography90m</a>
+            and spatial biodiversity data.</li>
+        <li><a href="https://github.com/apear9/rdwplus">rdwplus</a>: implementation of the IDW-PLUS (inverse distance weighted percent
+            land use for streams) algorithm with GRASS GIS tools.</li>
+        <li><a href="https://github.com/adamlilith/fasterRaster">fasterRaster</a>: handle large-in-memory/large-on-disk spatial rasters 
+            and vectors in R through GRASS GIS using rgrass as a backend.</li>
+    </ul>
+
+    <small>Only a (dedicated) subset of GRASS tools available through these packages</small>
 </section>
 
 
 <section>
-    <h2>Join a Working Group</h2>
+    <h1>R packages interfacing with GRASS</h1>
+
+    <ul>
+        <li><a href="//r-spatial.github.io/qgisprocess/">qgisprocessing</a>: provide an R interface to the geoprocessing algorithms of QGIS.</li>
+        <li><a href="https://r-spatial.github.io/link2GI/">link2GI</a>: functions to connect to common open source GI software packages. 
+            It supports both the use of wrapper packages and direct API-use via system calls.</li>
+        <li><a href="https://rsbivand.github.io/rgrass/">rgrass</a>: interpreted interface between GRASS GIS and R, 
+            based on starting R from within the GRASS GIS environment, or running free-standing R in a temporary or 
+            existing GRASS location; the package provides facilities for using all GRASS commands from the R command line.</li>
+    </ul>
+</section>
+
+
+<section>
+    <h1>How to use GRASS and R through rgrass bridge</h1>
+    
+    <p>The main functions within **rgrass** are the following:</p>
+
+    <ul>
+        <li><code>initGRASS()</code>: starts a GRASS session from R</li>
+        <li><code>execGRASS()</code>: executes GRASS commands from R</li>
+        <li><code>read_VECT()</code> and <code>read_RAST()</code>: read vector and raster maps from a GRASS project into R</li>
+        <li><code>write_VECT()</code> and <code>write_RAST()</code>: write vector and raster objects from R into a GRASS project</li>
+    </ul>
+
+    <blockquote>Access the full stack of tools and extensions in GRASS GIS from R!!</blockquote>
+</section>
+
+
+<section>
+    <h1>How to use GRASS and R through rgrass bridge</h1>
+
+    <h2>Choose your own adventure</h2>
+
+    <img src="https://media.tenor.com/eD6ODXgpFdsAAAAi/wat.gif" class="stretch">
+
+</section>
+
+<section>
+    <h2>Use GRASS GIS tools within your R spatial workflows</h2>
+    
+    <ul>
+        <li>Create a temporary GRASS project with the raster or vector map you want to process with GRASS</li>
+        <li>Write the R map object into GRASS project</li>
+        <li>Run the desired GRASS tool(s)</li>
+        <li>Export the results back to R or your disk</li>
+    </ul>
+</section>
+
+
+<section>
+    <h2>Use GRASS GIS tools within your R spatial workflows</h2>
+    
+    <p>Assuming we have a terra SpatRast object, r, within our R session:</p>
+    <pre><code>
+        library(rgrass)
+
+        initGRASS(home = tempdir(), SG = r, override = TRUE)
+
+        write_RAST(r, "terra_elev")
+
+        execGRASS("r.slope.aspect", elevation = "terra_elev", slope = "slope", aspect = "aspect")
+
+        grass_maps <- read_RAST(c("aspect", "slope"))
+    </code></pre>
+</section>
+
+
+<section>
+    <h2>Use R tools within GRASS GIS workflows</h2>
+
+    <ul>
+        <li>From R, start GRASS within your project</li>
+        <li>Read vector or raster data from GRASS into R</li>
+        <li>Do your analysis, modeling, visualizations</li>
+        <li>Optionally write vector and raster outputs back into GRASS</li>
+    </ul>
+</section>
+
+
+<section>
+    <h2>Use R tools within GRASS GIS workflows</h2>
+
+    <pre><code>
+    grassdata <- path.expand("~/grassdata/")
+    project <- "nc_basic_spm_grass7"
+    mapset <- "PERMANENT"
+
+    initGRASS(gisDbase = grassdata, location = project, mapset = mapset, override = TRUE, remove_GISRC= TRUE)
+
+    execGRASS("g.list", parameters = list(type="raster"))
+
+    read_RAST()
+
+    # ... plot, use for some analysis, get outputs
+
+    write_RAST()
+    </code></pre>
+</section>
+
+
+<section>
+    <h2>Use R tools within GRASS GIS workflows: an example</h2>
+
+    <https://veroandreo.github.io/grass_ncsu_2023/notebook_ex_sdm_r.html>
+    <br>
+
+    <iframe width="400" height="200"
+            src="img/use_r_with_grass_data.webm" 
+            frameborder="0"
+            allowfullscreen>
+    </iframe>
+</section>
+
+
+<section>
+    <h2>Resources</h2>
+    
     <ul>
         <li>
-            Groups:
+            Documentation:
             <ul>
-                <li>geoprocessing engine</li>
-                <li>being a good neighbor in open source ecosystem</li>
-                <li>documentation</li>
-                <li>community engagement and promotion</li>
+                <li><a href="https://grass.osgeo.org/learn/">Learn center</a></li>
+                <li>See <a href="https://grass.osgeo.org/grass-stable/manuals/graphical_index.html">full list of core tools</a>
+                <li>See <a href="https://grass.osgeo.org/grass-stable/manuals/addons">tools in Addons repository</a>
             </ul>
-        </li>
-        <li>See <a href="https://grasswiki.osgeo.org/wiki/Working_Groups">wiki</a> for details!</li>
+        <li>
+            Tutorials <small>(my three favorites)</small>:
+            <ul>
+                <li>
+                    <a href="https://veroandreo.github.io/grass_foss4geu_2024/">Let's combine GRASS, Python and R</a>
+                <li>
+                    <a href="https://github.com/veroandreo/foss4g2022_grass4rs">GRASS GIS for remote sensing data processing</a>
+                <li>
+                    <a href="https://github.com/ncsu-geoforall-lab/grass-gis-workshop-foss4g-2022">Unleash the power of GRASS GIS with Jupyter</small></a>
+            </ul>
+        <li>
     </ul>
-    <img src="img/community_prague_2023_explaining.jpg" class="stretch">
-</section>
+    </section>
+    
+    
+    <section>
+        <h2>Support</h2>
+        <ul>
+            <li>Community support
+                <ul>
+                    <li><a href="https://lists.osgeo.org/mailman/listinfo/grass-user">user mailing list</a> 
+                    <li><a href="https://github.com/OSGeo/grass/discussions">GitHub Discussions</a> 
+                    <li><a href="https://app.element.io/#/room/#grassgis_community:gitter.im">Gitter channel</a>
+                    <li><a href="https://grasswiki.osgeo.org/wiki/Mentoring_Program">Mentoring Program</a>
+                    </li>
+                </ul>
+            <li>Commercial support
+            <ul>
+                <li><a href="https://www.mundialis.de/en/open-source-gis/">mundialis GmbH & Co KG</a>
+                <li><a href="https://opengeolabs.cz/en/home/">OpenGeoLabs</a> (&amp; GISMentors)
+                <li><a href="https://geospatial.ncsu.edu/engage/service-center/">Center for Geospatial Analytics, NC State University</a>
+                <li>&hellip;
+            </ul>
+        </ul>
+        <br>
+        <img src="img/grass_gis.svg" alt="GRASS GIS logo" class="stretch">
+    </section>
 
 
 <section>
+    <h1>Take home messages</h1>
+
+    <ul>
+        <li>Let's (re)use the best tools available for the tasks at hand</li>
+        <li>Let's focus on enhancing bridges!</li>
+    </ul>
+</section>
+
+
+<section id="Bye">
     <img src="img/grass_license.png" alt="GRASS GIS logo" class="stretch">
     <p>
         <small>
-        Ask a question, get a special sticker.
+        Ask a question, get a special sticker <i class="fa fa-smile-o"></i>
         </small>
     </p>
-    <p>
-            <small>
-                vpetras&#64;ncsu&#46;edu,
-                <a href="https://twitter.com/vaclavpetras/">@vaclavpetras</a>, <a href="https://github.com/wenzeslaus/">@wenzeslaus</a>
-                <br>
-                <small>
-                    <a href="https://wenzeslaus.github.io/grass-gis-talks">wenzeslaus.github.io/grass-gis-talks</a>
-                </small>
-            </small>
-    </p>
+
+    <p><small>
+        <i class="fa fa-envelope"></i> veroandreo&#64;gmail&#46;com<br>
+        <small><a href="https://veroandreo.github.io/grass-gis-talks">veroandreo.github.io/grass-gis-talks</a></small><br>
+        <small>Funded by NSF award <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2303651">2303651</a></small>
+    </small></p>
 </section>
+
 
 <!-- ################# END CONTENT ################# -->
             </div>
