@@ -168,7 +168,9 @@ spatial data engineering and data science workflows for scientific and operation
         <br>
         <a href="http://www.ncsu.edu/" title="North Carolina State University">NC State University</a>
     </p>
-    <img src="img/grass_gis.svg" class="stretch"><i class="fa fa-heart fa-4x"></i><img src="img/R_logo.svg" class="stretch">
+
+    <img src="img/grass_gis.svg" height="200px"> <i class="fa fa-heart fa-4x fa-red"></i> <img src="img/R_logo.svg" height="200px">
+
     <p><small>useR! Conference, Salzburg, July 8-11, 2024</small></p>
     <p>
         <a href="https://veroandreo.github.io/grass-gis-talks/useR2024.html">veroandreo.github.io/grass-gis-talks</a>
@@ -260,33 +262,42 @@ spatial data engineering and data science workflows for scientific and operation
 </section>
 
 
-<section>
+<section id="Why using GRASS">
     <h1>Why using GRASS?</h1>
 </section>
 
 <section>
     <h2>Mature and robust geoprocessing engine with unique tools for diverse applications</h2>
+
     <ul>
         <li>Processing tools:
             <b>500+</b> <a href="https://grass.osgeo.org/grass-stable/manuals/full_index.html">in core</a>,
             <b>400+</b> <a href="https://grass.osgeo.org/grass-stable/manuals/addons/">addons</a></li>
     </ul>
-
+    <br>
     <div class="columns">
-        <div class="column" style="width:24%;">
+        <div class="column" style="width:23%;">
             Time series support
+            
+            <img src="img/tgrass_flowchart.png">
         </div>
 
         <div class="column" style="width:24%;">
             Remote Sensing
+
+            <img src="https://grass.osgeo.org/learn/gallery/#&gid=1&pid=112">
         </div>
 
         <div class="column" style="width:24%;">
             Hydrology & Geomorphology
+
+            <img src="https://grass.osgeo.org/learn/gallery/#&gid=1&pid=60">
         </div>
 
         <div class="column" style="width:24%;">
             Simulations
+
+            <img src="img/FUTURES_addon.png">
         </div>
     </div>
 </section>
@@ -351,7 +362,7 @@ spatial data engineering and data science workflows for scientific and operation
 </section>
 
 <section>
-    <h2>Streamlined access to data of different sources</h2>
+    <h2>Streamlined access to data</h2>
     <p>
         Automated download and import of common datasets
         <small>
@@ -379,13 +390,13 @@ spatial data engineering and data science workflows for scientific and operation
     <h1>R packages using GRASS in the background</h1>
 
     <ul>
-        <li><a href="https://glowabio.github.io/hydrographr/">hydrographr</a>: ollection of R function wrappers for GDAL and GRASS GIS 
+        <li><a href="https://glowabio.github.io/hydrographr/">hydrographr</a>: wrappers for GDAL and GRASS GIS 
             functions to efficiently work with <a href="https://essd.copernicus.org/articles/14/4525/2022/essd-14-4525-2022.html">Hydrography90m</a>
             and spatial biodiversity data.</li>
         <li><a href="https://github.com/apear9/rdwplus">rdwplus</a>: implementation of the IDW-PLUS (inverse distance weighted percent
             land use for streams) algorithm with GRASS GIS tools.</li>
         <li><a href="https://github.com/adamlilith/fasterRaster">fasterRaster</a>: handle large-in-memory/large-on-disk spatial rasters 
-            and vectors in R through GRASS GIS using rgrass as a backend.</li>
+            and vectors in R through GRASS GIS.</li>
     </ul>
 
     <small>Only a (dedicated) subset of GRASS tools available through these packages</small>
@@ -396,12 +407,11 @@ spatial data engineering and data science workflows for scientific and operation
     <h1>R packages interfacing with GRASS</h1>
 
     <ul>
-        <li><a href="//r-spatial.github.io/qgisprocess/">qgisprocessing</a>: provide an R interface to the geoprocessing algorithms of QGIS.</li>
-        <li><a href="https://r-spatial.github.io/link2GI/">link2GI</a>: functions to connect to common open source GI software packages. 
-            It supports both the use of wrapper packages and direct API-use via system calls.</li>
-        <li><a href="https://rsbivand.github.io/rgrass/">rgrass</a>: interpreted interface between GRASS GIS and R, 
-            based on starting R from within the GRASS GIS environment, or running free-standing R in a temporary or 
-            existing GRASS location; the package provides facilities for using all GRASS commands from the R command line.</li>
+        <li><a href="//r-spatial.github.io/qgisprocess/">qgisprocessing</a>: provide an R interface to the geoprocessing algorithms of QGIS, included GRASS provider.</li>
+        <li><a href="https://r-spatial.github.io/link2GI/">link2GI</a>: functions to connect to common open source GI software packages, via wrapper functions and direct 
+            API-use with system calls.</li>
+        <li><a href="https://rsbivand.github.io/rgrass/">rgrass</a>: interpreted interface between GRASS GIS and R, provides facilities for using all GRASS commands 
+            from the R command line.</li>
     </ul>
 </section>
 
@@ -409,7 +419,7 @@ spatial data engineering and data science workflows for scientific and operation
 <section>
     <h1>How to use GRASS and R through rgrass bridge</h1>
     
-    <p>The main functions within **rgrass** are the following:</p>
+    <p>The main functions within <b>rgrass</b> are the following:</p>
 
     <ul>
         <li><code>initGRASS()</code>: starts a GRASS session from R</li>
@@ -417,6 +427,7 @@ spatial data engineering and data science workflows for scientific and operation
         <li><code>read_VECT()</code> and <code>read_RAST()</code>: read vector and raster maps from a GRASS project into R</li>
         <li><code>write_VECT()</code> and <code>write_RAST()</code>: write vector and raster objects from R into a GRASS project</li>
     </ul>
+    <br>
 
     <blockquote>Access the full stack of tools and extensions in GRASS GIS from R!!</blockquote>
 </section>
@@ -425,28 +436,29 @@ spatial data engineering and data science workflows for scientific and operation
 <section>
     <h1>How to use GRASS and R through rgrass bridge</h1>
 
-    <h2>Choose your own adventure</h2>
-
     <img src="https://media.tenor.com/eD6ODXgpFdsAAAAi/wat.gif" class="stretch">
 
+    <h2>Choose your own adventure</h2>
 </section>
 
 <section>
     <h2>Use GRASS GIS tools within your R spatial workflows</h2>
     
-    <ul>
+    <p><ul>
         <li>Create a temporary GRASS project with the raster or vector map you want to process with GRASS</li>
-        <li>Write the R map object into GRASS project</li>
+        <li>Write the R map object into the temporary GRASS project</li>
         <li>Run the desired GRASS tool(s)</li>
         <li>Export the results back to R or your disk</li>
     </ul>
+    </p>
 </section>
 
 
 <section>
     <h2>Use GRASS GIS tools within your R spatial workflows</h2>
     
-    <p>Assuming we have a terra SpatRast object, r, within our R session:</p>
+    <p>Assuming we have a <em>terra SpatRast</em> object, r, within our R session:</p>
+
     <pre><code>
         library(rgrass)
 
@@ -481,15 +493,19 @@ spatial data engineering and data science workflows for scientific and operation
     project <- "nc_basic_spm_grass7"
     mapset <- "PERMANENT"
 
-    initGRASS(gisDbase = grassdata, location = project, mapset = mapset, override = TRUE, remove_GISRC= TRUE)
+    initGRASS(gisDbase = grassdata, 
+              location = project, 
+              mapset = mapset, 
+              override = TRUE, 
+              remove_GISRC= TRUE)
 
     execGRASS("g.list", parameters = list(type="raster"))
 
-    read_RAST()
+    elev <- read_RAST("elevation")
 
     # ... plot, use for some analysis, get outputs
 
-    write_RAST()
+    write_RAST(elev, "new_elevation")
     </code></pre>
 </section>
 
@@ -500,7 +516,7 @@ spatial data engineering and data science workflows for scientific and operation
     <https://veroandreo.github.io/grass_ncsu_2023/notebook_ex_sdm_r.html>
     <br>
 
-    <iframe width="400" height="200"
+    <iframe width="800" height="500"
             src="img/use_r_with_grass_data.webm" 
             frameborder="0"
             allowfullscreen>
@@ -509,7 +525,7 @@ spatial data engineering and data science workflows for scientific and operation
 
 
 <section>
-    <h2>Resources</h2>
+    <h2>GRASS resources</h2>
     
     <ul>
         <li>
@@ -529,33 +545,32 @@ spatial data engineering and data science workflows for scientific and operation
                 <li>
                     <a href="https://github.com/ncsu-geoforall-lab/grass-gis-workshop-foss4g-2022">Unleash the power of GRASS GIS with Jupyter</small></a>
             </ul>
-        <li>
     </ul>
-    </section>
+</section>
     
     
-    <section>
-        <h2>Support</h2>
-        <ul>
-            <li>Community support
-                <ul>
-                    <li><a href="https://lists.osgeo.org/mailman/listinfo/grass-user">user mailing list</a> 
-                    <li><a href="https://github.com/OSGeo/grass/discussions">GitHub Discussions</a> 
-                    <li><a href="https://app.element.io/#/room/#grassgis_community:gitter.im">Gitter channel</a>
-                    <li><a href="https://grasswiki.osgeo.org/wiki/Mentoring_Program">Mentoring Program</a>
-                    </li>
-                </ul>
-            <li>Commercial support
+<section>
+    <h2>Support</h2>
+    <ul>
+        <li>Community support
+            <ul>
+                <li><a href="https://lists.osgeo.org/mailman/listinfo/grass-user">user mailing list</a> 
+                <li><a href="https://github.com/OSGeo/grass/discussions">GitHub Discussions</a> 
+                <li><a href="https://app.element.io/#/room/#grassgis_community:gitter.im">Gitter channel</a>
+                <li><a href="https://grasswiki.osgeo.org/wiki/Mentoring_Program">Mentoring Program</a>
+                </li>
+            </ul>
+        <li>Commercial support
             <ul>
                 <li><a href="https://www.mundialis.de/en/open-source-gis/">mundialis GmbH & Co KG</a>
                 <li><a href="https://opengeolabs.cz/en/home/">OpenGeoLabs</a> (&amp; GISMentors)
                 <li><a href="https://geospatial.ncsu.edu/engage/service-center/">Center for Geospatial Analytics, NC State University</a>
                 <li>&hellip;
             </ul>
-        </ul>
-        <br>
-        <img src="img/grass_gis.svg" alt="GRASS GIS logo" class="stretch">
-    </section>
+    </ul>
+    <br>
+    <img src="img/grass_gis.svg" alt="GRASS GIS logo" class="stretch">
+</section>
 
 
 <section>
@@ -565,6 +580,9 @@ spatial data engineering and data science workflows for scientific and operation
         <li>Let's (re)use the best tools available for the tasks at hand</li>
         <li>Let's focus on enhancing bridges!</li>
     </ul>
+
+    <i class="fa fa-bridge fa-6"></i>
+    
 </section>
 
 
