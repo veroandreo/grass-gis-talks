@@ -4,9 +4,12 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Status of GRASS GIS project</title>
+        <title>Boost Spatial Data Science Workflows with GRASS GIS and R</title>
 
-        <meta name="description" content="GRASS GIS is a general geospatial processing tool. The latest version comes with a single-window layout and streamlined data management addressing user feedback. GRASS’ code was recently revitalized by code quality improvements, a perfect gift for its 40th birthday!">
+        <meta name="description" content="GRASS GIS is a powerful geoprocessing engine that offers a robust and mature toolset for diverse applications.
+        GRASS was developed for speed and efficiency, which allows it to scale workflows with massive datasets rather simply. At the same time, R excels 
+        at statistical analysis, modeling and data visualization, with a vibrant spatial community. We can join forces to build and enhance bridges 
+        connecting our individual strengths.">
         <meta name="author" content="Veronica Andreo">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -209,7 +212,7 @@ spatial data engineering and data science workflows for scientific and operation
         <a href="http://www.ncsu.edu/" title="North Carolina State University">NC State University</a>
     </p>
 
-    <img src="img/grass_gis.svg" height="200px"> <img src="img/R_logo.svg" height="170px">
+    <img src="img/grass_gis.svg" height="200px"> <img src="img/R_logo.svg" height="180px" style="padding-bottom: 10px;">
 
     <p><small>useR! Conference, Salzburg, July 8-11, 2024</small></p>
     <p>
@@ -223,12 +226,12 @@ spatial data engineering and data science workflows for scientific and operation
 
 
 <section id="Presenter">
-    <h2>Who am I</h2>
+    <h2>About the presenter</h2>
     <ul>
         <img src="img/profile.png" class="bio-img">
         <li>Visiting scholar at NC State's <a href="http://geospatial.ncsu.edu/" title="NCSU Center for Geospatial Analytics">Center for Geospatial Analytics</a>
         <li>Lic. &amp; PhD in Biology, MSc in Applications of the Spatial Information
-        <li>Researcher &amp; lecturer at <a href="https://ig.conae.unc.edu.ar/" target="_blank">Gulich Institute</a></li>
+        <li>Researcher &amp; lecturer at <a href="https://ig.conae.unc.edu.ar/" target="_blank">Gulich Institute</a> in Argentina</li>
         <li>GRASS GIS: Development Team, PSC chair
         <li>OSGeo: Charter member</li>
     </ul>
@@ -264,7 +267,7 @@ spatial data engineering and data science workflows for scientific and operation
 
 <section>
     <h2>What is GRASS GIS?</h2>
-    <p>Geovisualization and data analytics tool in R or quarto notebooks</p>
+    <p>Data analytics tool in R or quarto notebooks</p>
     <img src="img/grass_within_rstudio.png" class="stretch">
 </section>
 
@@ -289,7 +292,7 @@ spatial data engineering and data science workflows for scientific and operation
 <section>
     <h2>What is GRASS GIS?</h2>
     <p>Cloud geoprocessing backend</p>
-    <img src="https://neteler.gitlab.io/actinia-introduction/img/actinia_architecture_FTTH.png" class="stretch">
+    <img src="img/actinia_architecture_FTTH.png" class="stretch">
     <small>Image source: <a href="https://neteler.gitlab.io/actinia-introduction/">neteler.gitlab.io/actinia-introduction/</a></small>
 </section>
 
@@ -324,7 +327,7 @@ spatial data engineering and data science workflows for scientific and operation
         </div>
 
         <div class="column" style="width:24%;">
-            Remote Sensing
+            Remote Sensing toolset
 
             <img src="img/i_colors_enhance.jpg">
         </div>
@@ -429,9 +432,9 @@ spatial data engineering and data science workflows for scientific and operation
     <h2>HPC ready</h2>
     <ul>
         <li><a href="https://github.com/ncsu-geoforall-lab/grass-gis-on-hpc-henry2">Recipes for High Performance Computing setups</a></li>
-        <li>Better integration with conda environments</li>
+        <li>Better integration with conda environments: conda package on the way!</li>
         <li>Reduced potential for race conditions</li>
-        <li>Easier to create parallel workflows</li>
+        <li>Easily create parallel workflows</li>
     </ul>
     <img src="img/skyview.png" class="stretch">
     <small>by Vaclav Petras, Markus Neteler, Nicklas Larsson, &hellip;</small>
@@ -440,9 +443,9 @@ spatial data engineering and data science workflows for scientific and operation
 <section>
     <h2>Streamlined access to data</h2>
     <p>
-        Automated download and import of common datasets
+        Automated download and import of diverse datasets
         <small>
-            i.eodag, i.sentinel, i.modis, i.landsat, r.in.usgs, r.in.nasadem, m.crawl.thredds, t.rast.import.netcdf, t.stac (on the way), &hellip;
+            i.eodag, i.sentinel, i.modis, i.landsat, r.in.usgs, r.in.nasadem, m.crawl.thredds, t.rast.import.netcdf, t.stac (on the way!), &hellip;
         </small>
     </p>
     <img src="img/usgs_ned_naip_3d.png" class="stretch">
@@ -465,6 +468,19 @@ spatial data engineering and data science workflows for scientific and operation
     <h2>Optimized for large data</h2>
 
     <img src="img/big_files.jpg" class="stretch">
+
+    <p>392 billion cells!</p>
+</section>
+
+<section>
+    <h2>Fast External Data Links</h2>
+    <em>r.external</em> links (opens) external raster data (GeoTiffs, &hellip;) much faster.
+    <br>
+    <small>(2-5&times; faster, or almost no time for some workflows)</small>
+    <br>
+    <img src="img/r_external.png" class="stretch">
+    <p>by Markus Metz</p>
+    <p>Great for workflows when only portion of the data is processed in GRASS GIS.</p>
 </section>
 
 
@@ -498,7 +514,7 @@ spatial data engineering and data science workflows for scientific and operation
     <h1>R packages interfacing with GRASS</h1>
 
     <ul>
-        <li><a href="//r-spatial.github.io/qgisprocess/">qgisprocessing</a>: provide an R interface to the geoprocessing algorithms of QGIS, included GRASS provider.</li>
+        <li><a href="//r-spatial.github.io/qgisprocess/">qgisprocessing</a>: provide an R interface to the geoprocessing algorithms of QGIS, included GRASS provider (only a selection).</li>
         <li><a href="https://r-spatial.github.io/link2GI/">link2GI</a>: functions to connect to common open source GI software packages, via wrapper functions and direct 
             API-use with system calls.</li>
         <li><a href="https://rsbivand.github.io/rgrass/">rgrass</a>: interpreted interface between GRASS GIS and R, provides facilities for using <b>all GRASS tools 
@@ -508,7 +524,7 @@ spatial data engineering and data science workflows for scientific and operation
 
 
 <section>
-    <h1>How to use GRASS through the rgrass bridge</h1>
+    <h1><a href="https://rsbivand.github.io/rgrass/">rgrass</a></h1>
     
     <p>The main functions within <b>rgrass</b> are the following:</p>
 
@@ -521,11 +537,13 @@ spatial data engineering and data science workflows for scientific and operation
     <br>
 
     <p><blockquote>Access the full stack of tools and extensions in GRASS GIS from R!!</blockquote></p>
+
+    <img src="img/rgrass.png" class="stretch">
 </section>
 
 
 <section>
-    <h1>How to use GRASS through the rgrass bridge</h1>
+    <h1>How to use GRASS through the rgrass package?</h1>
 
     <img src="https://media.tenor.com/eD6ODXgpFdsAAAAi/wat.gif" class="stretch">
 
@@ -537,8 +555,8 @@ spatial data engineering and data science workflows for scientific and operation
     
     <p><ul>
         <li>Create a temporary GRASS project with the raster or vector map you want to process with GRASS</li>
-        <li>Write the R map object into the temporary GRASS project</li>
-        <li>Run the desired GRASS tool(s)</li>
+        <li>Write the R map object into the GRASS project</li>
+        <li>Run the desired GRASS tool(s) from R</li>
         <li>Export the results back to R or your disk</li>
     </ul>
     </p>
@@ -553,7 +571,12 @@ spatial data engineering and data science workflows for scientific and operation
     <pre><code>
         library(rgrass)
 
-        initGRASS(home = tempdir(), SG = r, override = TRUE)
+        grassbin <- system("grass --config path", intern = TRUE)
+
+        initGRASS(gisBase = grassbin, 
+                  home = tempdir(), 
+                  SG = r, 
+                  override = TRUE)
 
         write_RAST(r, "terra_elev")
 
@@ -570,7 +593,7 @@ spatial data engineering and data science workflows for scientific and operation
     <ul>
         <li>From R, start GRASS within your project</li>
         <li>Read vector or raster data from GRASS into R</li>
-        <li>Do your analysis, modeling, visualizations</li>
+        <li>Do your analysis, modeling, visualizations with R tools</li>
         <li>Optionally write vector and raster outputs back into GRASS</li>
     </ul>
 </section>
@@ -584,7 +607,8 @@ spatial data engineering and data science workflows for scientific and operation
     project <- "nc_basic_spm_grass7"
     mapset <- "PERMANENT"
 
-    initGRASS(gisDbase = grassdata, 
+    initGRASS(gisBase = grassbin,,
+              gisDbase = grassdata, 
               location = project, 
               mapset = mapset, 
               override = TRUE, 
@@ -594,7 +618,7 @@ spatial data engineering and data science workflows for scientific and operation
 
     elev <- read_RAST("elevation")
 
-    # ... plot, use for some analysis, get outputs
+    # ... plot, run analysis and models, get outputs
 
     write_RAST(elev, "new_elevation")
     </code></pre>
@@ -639,6 +663,8 @@ spatial data engineering and data science workflows for scientific and operation
                     <a href="https://github.com/ncsu-geoforall-lab/grass-gis-workshop-foss4g-2022">Unleash the power of GRASS GIS with Jupyter</small></a>
             </ul>
     </ul>
+    <br>
+    <img src="img/grass_gis.svg" alt="GRASS GIS logo" class="stretch">
 </section>
     
     
