@@ -570,24 +570,32 @@ spatial data engineering and data science workflows for scientific and operation
     <p>Assuming we have a <em>terra SpatRast</em> object, r, within our R session:</p>
 
     <pre><code>
-        library(rgrass)
+    library(rgrass)
 
-        grassbin <- system("grass --config path", intern = TRUE)
+    grassbin <- system("grass --config path", intern = TRUE)
 
-        initGRASS(gisBase = grassbin, 
-                  home = tempdir(), 
-                  SG = r, 
-                  override = TRUE)
+    initGRASS(gisBase = grassbin, 
+              home = tempdir(), 
+              SG = r, 
+              override = TRUE)
 
-        write_RAST(r, "terra_elev")
+    write_RAST(r, "terra_elev")
 
-        execGRASS("r.slope.aspect", 
-                  elevation = "terra_elev", 
-                  slope = "slope", 
-                  aspect = "aspect")
+    execGRASS("r.slope.aspect", 
+              elevation = "terra_elev", 
+              slope = "slope", 
+              aspect = "aspect")
 
-        grass_maps <- read_RAST(c("aspect", "slope"))
+    grass_maps <- read_RAST(c("aspect", "slope"))
     </code></pre>
+
+    <p>Alternatively...</p>
+
+    <pre><code>
+    execGRASS("r.import", input=r, output="terra_elev")
+    execGRASS("r.external", input="file.tif", output="file") # much faster
+    </code></pre>
+
 </section>
 
 
