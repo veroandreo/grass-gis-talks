@@ -222,6 +222,8 @@ spatial data engineering and data science workflows for scientific and operation
 
 <section>
     <img src="img/alf.png" class="stretch">
+
+    <p><small>After a talk with Jakub Nowosad at FOSS4G Europe last week :)</small></p>
 </section>
 
 
@@ -344,6 +346,7 @@ spatial data engineering and data science workflows for scientific and operation
             <img src="img/FUTURES_addon.png">
         </div>
     </div>
+    <br><br>
 
     <h2>Unique tools for diverse applications!!</h2>
 </section>
@@ -506,7 +509,7 @@ spatial data engineering and data science workflows for scientific and operation
         </div>
     </div>
 
-    <p><small>Only a (dedicated) subset of GRASS tools available through these packages</small></p>
+    <p><blockquote>Only a (dedicated) subset of GRASS tools available through these packages</blockquote></p>
 </section>
 
 
@@ -525,8 +528,6 @@ spatial data engineering and data science workflows for scientific and operation
 
 <section>
     <h1><a href="https://rsbivand.github.io/rgrass/">rgrass</a></h1>
-    
-    <p>The main functions within <b>rgrass</b> are the following:</p>
 
     <ul>
         <li><code>initGRASS()</code>: starts a GRASS session from R</li>
@@ -536,9 +537,9 @@ spatial data engineering and data science workflows for scientific and operation
     </ul>
     <br>
 
-    <p><blockquote>Access the full stack of tools and extensions in GRASS GIS from R!!</blockquote></p>
-
     <img src="img/rgrass.png" class="stretch">
+
+    <p><blockquote>Access the full stack of tools and extensions in GRASS GIS from R!!</blockquote></p>
 </section>
 
 
@@ -547,7 +548,7 @@ spatial data engineering and data science workflows for scientific and operation
 
     <img src="https://media.tenor.com/eD6ODXgpFdsAAAAi/wat.gif" class="stretch">
 
-    <h2>Choose your own adventure</h2>
+    <h2>Choose your own adventure!</h2>
 </section>
 
 <section>
@@ -580,7 +581,10 @@ spatial data engineering and data science workflows for scientific and operation
 
         write_RAST(r, "terra_elev")
 
-        execGRASS("r.slope.aspect", elevation = "terra_elev", slope = "slope", aspect = "aspect")
+        execGRASS("r.slope.aspect", 
+                  elevation = "terra_elev", 
+                  slope = "slope", 
+                  aspect = "aspect")
 
         grass_maps <- read_RAST(c("aspect", "slope"))
     </code></pre>
@@ -688,7 +692,7 @@ spatial data engineering and data science workflows for scientific and operation
             </ul>
     </ul>
     <br>
-    <img src="img/grass_gis.svg" alt="GRASS GIS logo" class="stretch">
+    <img src="img/grass_community_meeting_group_pic_2024_crop_crop.jpg" alt="GRASS GIS logo" class="stretch">
 </section>
 
 
