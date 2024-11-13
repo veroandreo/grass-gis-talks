@@ -186,6 +186,7 @@ as well as contribution and funding opportunities will be presented.
     <li>OSGeo: Charter member</li>
 </ul>
 
+<br>
 <i class="fa fa-globe"></i> <a href="https://veroandreo.gitlab.io/" target="_blank">veroandreo.gitlab.io</a>
 </section>
 
@@ -285,8 +286,8 @@ as well as contribution and funding opportunities will be presented.
             <small>Maintained legacy version for some production systems</small>
         </li>
     </ul>
-    <br>
-    <img src="img/futures_model_output.png" class="stretch">
+    <br><br>
+    <img src="img/futures_model_output.png" width="80%">
 
     <aside class="notes">
         major.minor.micro &ndash; semantic versioning:
@@ -300,7 +301,7 @@ as well as contribution and funding opportunities will be presented.
 <section id="New features">
     
     <section>
-        <h1>New features in GRASS 8.4</h1>
+        <h1>New in GRASS 8.4</h1>
         <br>
         <i class="fa fa-rocket fa-4x"></i>
 
@@ -407,11 +408,15 @@ as well as contribution and funding opportunities will be presented.
 
     <section>
         <h2>CLI: <code>--tmp-project</code> with <code>--exec</code></h2>
+        
         <code>--tmp-location</code> is now <code>--tmp-project</code>
+        
         <pre style="font-size: 94%;"><code data-trim data-noescape>grass --tmp-project EPSG:3358 --exec \
             r.viewshed input=elevation \
             output=viewshed coordinates=642964,222890
         </code></pre>
+
+        <br><br>
         <p><code>--tmp-location</code> continues to work</p>
     </section>
 
@@ -420,7 +425,7 @@ as well as contribution and funding opportunities will be presented.
         
         <p><code>grass.script</code> Python package: </p>
         
-        <p>Greatly simplified the creation of new projects in 
+        <p>Creation of new projects greatly simplified in 
         Python without a running session (no more chicken and egg problems)</p>
         
         <pre><code data-trim data-noescape>
@@ -541,11 +546,13 @@ as well as contribution and funding opportunities will be presented.
         <h2>Mentoring and Student Grants Program</h2>
         
         <ul>
-            <li><a href="https://grasswiki.osgeo.org/wiki/Student_Grants">Student grants</a> to contribute to GRASS GIS: 1 student in 2023-2024. Call is open for this fall!</li></li>
-            <li><a href="https://grasswiki.osgeo.org/wiki/Mentoring_Program">Mentoring</a> to integrate GRASS GIS into your workflows: 11 people working on various topics. Call still open!</li>
+            <li><a href="https://grasswiki.osgeo.org/wiki/Student_Grants">Student grants</a> to contribute to GRASS GIS: 1 student in 2023-2024.</li></li>
+            <li><a href="https://grasswiki.osgeo.org/wiki/Mentoring_Program">Mentoring</a> to integrate GRASS GIS into your workflows: 11 people working on various topics.</li>
         </ul>
 
         <img src="img/mentoring.jpg" class="stretch">
+
+        <h3>Calls are open!</h3>
 
         <aside class="notes">
             Most of us started in GRASS GIS because of a mentor, we value mentoring. 
@@ -737,24 +744,6 @@ as well as contribution and funding opportunities will be presented.
             It does not cover daily maintenance activities, nor development or implementation of new features
         </aside>
     </section>
-
-    <section>
-        <h2>Funding Options on OpenCollective</h2>
-        <div class="columns">
-            <div class="column" style="width:50%;">
-                <ul>
-                    <li>Donation (one-time, any amount), Supporter starts at 10 USD/month, Sponsor starts at 500 USD/year</li>
-                    <li>Feedback? Talk to me about being part of the solution!</li>
-                </ul>
-                <img src="img/open_collective_qr.png">
-            </div>
-            <div class="column" style="width: 47%;">
-                <img src="img/opencollective.png">
-            </div>
-
-            <small><a href="https://opencollective.com/osgeo/projects/grass/contribute">https://opencollective.com/osgeo/projects/grass</a></small>
-    </section>
-
 </section>
 
 
@@ -810,27 +799,35 @@ as well as contribution and funding opportunities will be presented.
     </section>
     
     <section>
-        <h2>Sponsoring</h2>
-
-        <img src="img/open_collective_top.png" class="stretch">
+        <h2>Sponsor GRASS GIS!</h2>
 
         <div class="columns">
-            <div class="column" style="width:55%">
-                <br>
+            <div class="column" style="width:50%;">
                 <ul>
-                    <li>Money donations allow us to:</li>
-                    <ul>
-                        <li>organize face-to-face coding sessions (sprints)</li>
-                        <li>support mentoring programs and student grants</li>
-                        <li>finance infrastucture needs (web site, etc)</li>
-                    </ul>
+                    <li>Donation (one-time, any amount), Supporter starts at 10 USD/month, Sponsor starts at 500 USD/year</li>
+                    <li>Feedback? Talk to me about being part of the solution!</li>
                 </ul>
-            </div>
-            <div class="column" style="width:43%">
                 <img src="img/open_collective_qr.png">
             </div>
+            <div class="column" style="width: 47%;">
+                <img src="img/opencollective.png">
+            </div>
         </div>
+        
+        <small><a href="https://opencollective.com/osgeo/projects/grass/contribute">https://opencollective.com/osgeo/projects/grass</a></small>
+
+        <aside class="notes">
+            <ul>
+                <li>Money donations allow us to:</li>
+                <ul>
+                    <li>organize face-to-face coding sessions (sprints)</li>
+                    <li>support mentoring programs and student grants</li>
+                    <li>finance infrastucture needs (web site, etc)</li>
+                </ul>
+            </ul>
+        </aside>
     </section>
+
 
     <section>
         <h1>Get in touch with us!</h1>
@@ -838,13 +835,12 @@ as well as contribution and funding opportunities will be presented.
         <img src="img/grass_gis.svg" width="300px">
 
         <h2><a href="https://grass.osgeo.org/">grass.osgeo.org</a></h2>
-        <!-- <ul>
+        <ul>
             <li><i class="fab fa-x-twitter"></i><a href="https://twitter.com/grassgis"> @GRASSGIS</a>, </li>
             <li><i class="fab fa-mastodon"></i><a href="https://fosstodon.org/@grassgis"> @grassgis</a>, </li>
             <li><i class="fab fa-gitter"></i><a href="https://app.gitter.im/#/room/#grassgis_community:gitter.im"> grassgis/community chat</a>, </li>
-            <i class="fa fa-envelope"></i><a href="https://lists.osgeo.org/mailman/listinfo/grass-user"> grass-user mailing list</a>
-        </ul>      -->
-        <!-- <p>Pick the <a href="https://grass.osgeo.org/support/community/">channel</a> you prefer!</p> -->
+            <i class="fab fa-discourse"></i><a href="https://lists.osgeo.org/mailman/listinfo/grass-user"> discourse</a>
+        </ul>
     </section>
 </section>
 
@@ -852,11 +848,14 @@ as well as contribution and funding opportunities will be presented.
 <section data-background-video="img/grass_prague.mp4" data-background-video-loop data-background-video-muted>
   <h1 style="color: white;margin-bottom: 1.5em;">Questions?</h1>
 
-  <p><small style="color: white;">
-    <i class="fa fa-envelope"></i> veroandreo&#64;gmail&#46;com<br>
-    <small><a href="https://veroandreo.github.io/grass-gis-talks">veroandreo.github.io/grass-gis-talks</a></small><br>
-    <small>Funded by the GRASS GIS project</small>
-</small></p>
+  <div class="message-box-white" align="bottom">
+    <small style="color: white;">
+        <i class="fa fa-envelope"></i> veroandreo&#64;gmail&#46;com<br>
+        <small><a href="https://veroandreo.github.io/grass-gis-talks">veroandreo.github.io/grass-gis-talks</a></small><br>
+        <small>Funded by FOSS4G and the GRASS GIS project</small>
+    </small>
+  </div>
+
 </section>
 
 
