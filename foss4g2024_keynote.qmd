@@ -136,8 +136,6 @@ I told you I liked beer!
 
 ![](img/vero_keynote/fem_april_2013.JPG){fig-align="center"}
 
-
-<!-- ![](img/vero_keynote/Community_sprint_genova2013.png){fig-align="center"} -->
 :::
 
 ::: {.column width="50%"}
@@ -207,9 +205,9 @@ I told you I liked beer!
 
 - I started teaching GRASS courses and workshops, I was a mentor for Google Code-In and organized a codesprint at home in The Netherlands
 
-- While preparing teaching material, I started learning git and GitHub --> helpful when GRASS migrated
+- While preparing teaching material, I started learning git and GitHub {{< fa arrow-right >}} helpful when GRASS migrated
 
-- I got familiar with Hugo when putting together my website --> helpful for the new GRASS website 😍
+- I got familiar with Hugo when putting together my website {{< fa arrow-right >}} helpful for the new GRASS website 😍
 
 ::: {layout-ncol=3 layout-valign="center"}
 ![](img/vero_keynote/sprint_NL_autumn_2017_2.jpg)
@@ -371,9 +369,9 @@ How do we grow and nurture a new generation of contributors?
 ---
 
 :::{layout-ncol=2}
-![](img/vero_keynote/Vashek_and_A.jpg)
+![](img/vero_keynote/vashek_and_a.png)
 
-![](img/vero_keynote/ondrej_and_e.jpeg)
+![](img/vero_keynote/ondrej_and_e.png)
 :::
 
 
