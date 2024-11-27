@@ -1,0 +1,572 @@
+---
+title: "From field biology to the GRASS GIS board" 
+subtitle: "A Journey of Open Source Discovery and Nurturing a New Generation of Contributors"
+author: 
+  name: Dr. Verónica Andreo
+  affiliation: 
+  - CONICET
+  - Instituto Gulich (CONAE-UNC)
+  email: veroandreo@gmail.com
+  orcid: 0000-0002-4633-2161
+date: today
+title-slide-attributes:
+  data-background-image: img/vero_keynote/chatgpt_keynote.webp
+  data-background-size: cover
+  data-background-opacity: "0.4"
+format:
+  revealjs: 
+    hash-type: number 
+    slide-number: true
+    controls: true
+    preview-links: auto
+    theme: css/theme/vero_osgeo.scss
+    logo: img/grass_gis.svg
+---
+
+## Vero
+
+::: columns
+::: {.column width="60%"}
+- Researcher at [Gulich Institute](https://ig.conae.unc.edu.ar/)
+- PhD in Biological Sciences, MSc in Spatial Information Applications
+- Remote sensing & GIS applications in disease ecology
+- Member of the GRASS GIS Dev Team and project chair
+- I'm curious, I like learning new things, esp. geeky things
+- I like 🧉 and 🍺 (not together!) 
+
+{{< fa globe >}} <https://veroandreo.gitlab.io/>
+:::
+
+::: {.column width="40%"}
+```{r}
+#| echo: false
+#| fig-height: 4
+#| fig-width: 4
+library(leaflet)
+leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=-64.4653258, lat=-31.5204194, popup="IG")
+```
+
+![](img/vero_keynote/gulich_wide.jpeg)
+:::
+:::
+
+
+
+# GRASS (not what you think!)
+
+:::{.fragment}
+![](img/mcdonnells-curry.gif){width="75%"}
+
+Not that one either!
+:::
+
+
+
+# GRASS GIS
+
+Geospatial processing engine with CLI, GUI, Python, C and R APIs.
+
+![](img/splash_screen.png)
+
+:::{style="text-align: center;"}
+<https://grass.osgeo.org/> 
+:::
+
+::: footer
+Come to the **"State of GRASS GIS"** talk later today!
+:::
+
+
+
+## So, how did I go from this...
+
+:::{.r-stack}
+![](img/vero_keynote/DSC01004.JPG){.fragment width=70%}
+
+![](img/vero_keynote/DSC00958.JPG){.fragment width=75%}
+
+![](img/vero_keynote/DSC02077.JPG){.fragment width=75%}
+
+![](img/vero_keynote/vero_nires.jpg){.fragment width=75%}
+:::
+
+
+## ... to this?
+
+![](img/grass_community_meeting_group_pic_2024_crop.jpg)
+
+
+
+## A story of motivation and...
+
+::: {.fragment}
+![](https://newtrailbrewing.com/wp-content/uploads/2024/05/hands-of-three-men-doing-a-beer-toast-1024x512.png)
+:::
+
+::: {.fragment}
+I told you I liked beer!
+:::
+
+
+
+## 2012, the decision that changed it all
+
+- Finished PhD... jobless... 
+    - 🧚 *"Let's do an MSc and write another thesis, why not??"*
+- Searching for places in Italy to do an internship (ASI-CONAE)
+- Former colleague from Uni told me about **GRASS** in 2006 or so...
+- Internal motivation to switch to open source software (FOSS)
+
+::: {.fragment}
+![](img/vero_keynote/san_michele_panoramic.jpg){fig-align="center"}
+:::
+
+
+
+## 2013, the internship in Italy
+
+### Studying, Asking, Searching... 🍕🍻
+
+::: columns
+::: {.column width="50%"}
+- Participated in codesprints, conferences and met several GRASS GIS devs and power  users. 
+- **I loved the software, but I was hooked by the community**
+
+![](img/vero_keynote/fem_april_2013.JPG){fig-align="center"}
+
+
+<!-- ![](img/vero_keynote/Community_sprint_genova2013.png){fig-align="center"} -->
+:::
+
+::: {.column width="50%"}
+
+![](img/vero_keynote/outing_genova_2013.jpg){width="65%" fig-align="center"}
+
+![](img/vero_keynote/cena_alla_grota.jpg){width="65%" fig-align="center"}
+:::
+:::
+
+
+
+## Back to Argentina: Start contributing
+
+- Answer basic queries on the mailing lists
+- MSc thesis as an excuse to learn the new temporal tools under dev 
+- There were no docs, I wrote a [wiki](https://grasswiki.osgeo.org/wiki/Temporal_data_processing) (accessed 187,000 times!!!)
+
+::: {layout-ncol=2 layout-valign="top"}
+![](img/vero_keynote/msc_tesis.jpg)
+
+![](img/vero_keynote/wiki.png)
+:::
+
+
+
+## 💩 happens, but it got better...
+
+
+- Finished the MSc, jobless again... 😢
+- Temporary job in Italy 🇮🇹... more GRASS, first FOSS4G... 🤓
+- Back to Argentina 🇦🇷, jobless again... 😢
+- Small freelance contracts to implement remote sensing data processing routines with GRASS GIS and teach my first GRASS course... 🌾
+- Found a position in NL 🇳🇱🤩 🍻
+
+::: {layout-ncol=3 layout-valign="bottom"}
+![](img/vero_keynote/back_in_fem_2015.jpg)
+
+![](img/vero_keynote/foss4geu_como.jpg)
+
+![](img/vero_keynote/vero_itc.jpg)
+:::
+
+
+
+## Desire to fix stuff
+
+::: columns 
+::: {.column width="45%"}
+
+- I saw typos in the manuals and wanted to fix them
+- I learned to create patches that I sent to devs to apply them
+- I became pretty annoying... 
+- I was given **write permission on SVN**, they made me a member of the dev team! 😱😱 
+:::
+
+::: {.column width="55%"}
+![](img/vero_keynote/first_commit_addons.png)
+:::
+:::
+
+![](img/vero_keynote/first_commit_trunk.png)
+
+
+
+## Share and keep learning....
+
+- I started teaching GRASS courses and workshops, I was a mentor for Google Code-In and organized a codesprint at home in The Netherlands
+
+- While preparing teaching material, I started learning git and GitHub --> helpful when GRASS migrated
+
+- I got familiar with Hugo when putting together my website --> helpful for the new GRASS website 😍
+
+::: {layout-ncol=3 layout-valign="center"}
+![](img/vero_keynote/sprint_NL_autumn_2017_2.jpg)
+
+![](img/vero_keynote/grass_workshop_itc.jpg)
+
+![](img/vero_keynote/flyer_taller_grass_2021.jpeg)
+:::
+
+
+
+## Contribute code: A personal challenge 💪
+
+I learned a bit of Python and found something that could be useful: a set of tools to search, download and import Landsat data into GRASS GIS.
+
+![](img/vero_keynote/i_landsat.png){fig-align="center"}
+
+::: footer
+[i.landsat](https://grass.osgeo.org/grass-stable/manuals/addons/i.landsat.html)
+:::
+
+
+## PSC
+
+:::{.r-stack}
+![](img/vero_keynote/first_psc_meeting_feb2021.png){.fragment .fade-in-then-out}
+
+![](img/2024_08_11_new_psc_meeting.png){.fragment}
+:::
+
+
+
+# {background-image="https://www.nps.gov/common/uploads/cropped_image/primary/AADFB876-C044-F636-7160412173A6CB0D.jpg?width=1600&quality=90&mode=crop"}
+
+::: notes
+This has been my journey from field biology to GRASS board so far... that internship opened the door to a whole new world to me... 
+Can we backward engineer it and extract key components that might help us lower barriers and nurture a new generation of FOSS4G contributors? Let me show some numbers for LATAM...
+:::
+
+
+
+## Some facts
+
+- 2 LATAM international FOSS4G out of 18 (10%)
+- 2 active OSGeo local chapters out of approx. 45 (4%)
+- 39 LATAM members out of 547 OSGeo Charter members (7%)
+
+::: columns
+:::{.column width="60%"}
+![](img/vero_keynote/Figure_1.png)
+
+:::
+
+:::{.column width="39%"}
+![](img/vero_keynote/Figure_2.png)
+:::
+:::
+
+
+
+## Some facts (cont.)
+
+Contributors from LATAM with merged PRs (2020-2024, based on GitHub metadata)
+<br>
+
+| Project      | # Contributors |
+|--------------|:--------------:|
+| QGIS         | 1              |
+| GRASS GIS    | 3              |
+| GDAL         | 2              |
+| PROJ         | 0              |
+| GeoNode      | 1              |
+| GeoServer    | 3              |
+| OSGeo-live   | 0              |
+| r-spatial    | 4              |
+
+::: {.fragment}
+::: {.callout-note appearance="simple"}
+BTW, if you have indeed contributed to one of these projects, consider adding your location to your GitHub profile
+:::
+:::
+
+<!--
+   Meanwhile we are more than 615 million people
+
+   QGIS
+   Year  LATAM_Committers Committer_Usernames
+   2020                 1           espinafre
+   2021                 1           espinafre
+   2023                 1           espinafre
+   2024                 1           espinafre
+
+   GRASS GIS
+   Year  LATAM_Committers         Committer_Usernames
+   2020                 2          lrntct, veroandreo
+   2021                 2  veroandreo, CarlosGrohmann
+   2022                 1                  veroandreo
+   2023                 1                  veroandreo
+   2024                 1                  veroandreo
+   
+   GDAL
+   Year  LATAM_Committers Committer_Usernames
+   2020                 2   eamanu, espinafre 
+   
+   PROJ
+   no LATAM commiters 
+
+   OSGeo-live
+   no LATAM commiters 
+
+   GeoNode
+   Year  LATAM_Committers Committer_Usernames
+   2020                 1             gonrial
+
+   GeoServer
+   Year  LATAM_Committers                Committer_Usernames
+   2020                 2              groldan, fernandor777
+   2021                 2              fernandor777, groldan
+   2022                 3  groldan, mirandadam, fernandor777
+   2023                 2              groldan, fernandor777
+   2024                 1                            groldan
+
+-->
+
+
+
+## Why isn't there more LATAM presence? 
+
+::: columns
+::: {.column width="50%"}
+<br>
+
+- Language barrier even after all the translation tools? 
+- Much lower % of people graduate from higher education?
+- People move to the north searching for better conditions?
+- We are historically used to receive *"manufactured products"*?
+- We are simply too far and it is too expensive to travel to most events happening in the north?
+:::
+
+::: {.column width="40%"}
+::: {layout-nrow=2 layout-valign="center"}
+![](https://www.culturaespolitica.com/wp-content/uploads/2019/07/different-languages-472x212.jpg)
+
+![](img/vero_keynote/latam_migration.png){width="40%"}
+:::
+:::
+:::
+
+
+
+## {background-image="img/vero_keynote/watering.jpg"}
+
+::: {style="color: #ffffff; font-size: 2.2em;"}
+How do we grow and nurture a new generation of contributors? 
+:::
+
+
+
+---
+
+:::{layout-ncol=2}
+![](img/vero_keynote/Vashek_and_A.jpg)
+
+![](img/vero_keynote/ondrej_and_e.jpeg)
+:::
+
+
+
+## Mentoring: one person at a time
+
+![](img/community_prague_2023_laptop.jpg){fig-align="center"}
+
+::: notes
+One thing that was present during my journey was the community support and different mentors... offering a beer, I mean, a hand!
+:::
+
+
+
+## Regional and local solutions
+
+- Foster South-South solutions among individuals and organizations
+<!-- , we can do **our own capacity building** -->
+- Organize more small and short sprints and hands-on events that create bonding opportunities and foster inclusion
+- Teach workshops and courses with materials in ES or PT
+- Leave the comfort zone of only **using** FOSS, dare to **contribute**
+
+![](https://unsouthsouth.org/wp-content/uploads/2024/02/News_29_02_24_4.jpg){fig-align="center"}
+
+
+
+
+## {background-image="img/vero_keynote/vero_y_emma_koln.png" background-position="bottom"}
+
+
+
+## Where to start?
+
+The software is not in your language? Translate it! 
+
+![](img/vero_keynote/weblate.png)
+
+::: footer
+<https://weblate.osgeo.org>
+:::
+
+
+
+# Start small: fix typos...
+
+- You saw a typo in a manual? Fix it
+- Docs are missing examples or explanations? Add them
+- Discovered a bug? Report it, or even better, fix it
+- Are there new modules or functions? Test them
+
+::: columns
+:::{.column width="40%"}
+![](img/vero_keynote/edit_on_github_link.png)
+:::
+
+:::{.column width="60%"}
+![](img/vero_keynote/manual_in_gui_with_sourve_code_link.png)
+:::
+:::
+
+
+
+## Get started with code contributions
+
+::: columns
+
+::: {.column width="40%"}
+<br>
+
+- Set up your development environment. Projects will have a guideline 
+- Search for the label **good first issue**
+:::
+
+::: {.column width="60%"}
+![](img/vero_keynote/grass_contrib_guidelines_links.png)
+:::
+:::
+
+![](img/vero_keynote/good_first_issue.png){width="75%" fig-align="center"}
+
+::: footer
+[https://grass.osgeo.org/contribute/development/](https://grass.osgeo.org/contribute/development/)
+:::
+
+
+
+## Code contributions: Opportunities
+
+:::{layout-ncol=3}
+![Google Summer of Code](img/vero_keynote/qrcode_summerofcode.withgoogle.com.png)
+
+![GRASS Student Grants](img/vero_keynote/qrcode_student_grants.png)
+
+![GRASS Mentoring Program](img/vero_keynote/qrcode_mentoring_program.png)
+:::
+
+::: footer
+If you are interested, talk to me!
+:::
+
+
+
+## Learn and share
+
+- There's not enough teaching material or tutorials? Create them!
+
+![](img/vero_keynote/grass_tutorials.png){width="55%"}
+![](https://quarto.org/quarto.png){.fragment}
+
+::: footer
+<https://github.com/OSGeo/grass-tutorials>
+:::
+
+
+
+## Outreach
+
+- Are you good with design? Create cool stickers, help with the website, help with the swag shops.
+- Are you skilled with communication? Write a blog post, help with social media.
+
+:::{layout-ncol=3}
+![](img/vero_keynote/grass_linkedin.png)
+
+![](img/vero_keynote/grass_website.png)
+
+![](img/vero_keynote/redbubble_tshirt.png)
+![](img/vero_keynote/grass_stickers.jpg)
+:::
+
+::: footer
+<https://github.com/OSGeo/grass-website>
+:::
+
+
+## New features
+
+- Need a new feature? Propose it or just go ahead and implement it!
+
+![](img/vero_keynote/new_feature.png){fig-align="center"}
+
+::: {.message-box-white .fragment style="text-align: center;"}
+**Consider funding it, too!**
+:::
+
+
+
+## Financial support 
+
+::: columns
+::: {.column width="75%"}
+![](img/opencollective.png) 
+:::
+
+::: {.column width="25%"}
+![](img/open_collective_qr.png)
+
+Support your favorite FOSS4G!
+:::
+:::
+
+::: footer
+<https://opencollective.com/osgeo/projects/grass/contribute>
+:::
+
+
+
+## Every contribution counts! 
+
+Anyone willing to learn and do things is always welcome!
+
+:::{.r-stack}
+![](img/vero_keynote/i_want_to_work_on_this.png){.fragment width="80%"}
+
+
+![](img/vero_keynote/grass_website_fix_merged.png){.fragment}
+:::
+
+
+
+## Find your community and get involved!
+
+![](img/vero_keynote/end_of_year_toast.png)
+
+::: notes
+Find people who will join a beer call no matter time zones differences! From 8 am to 6 pm :)
+:::
+
+
+
+# {background-video="img/grass_prague.mp4" background-video-muted=true}
+
+::: {.message-box-white style="text-align:center; margin-top: 520px;"}
+{{< fa envelope >}} veroandreo@gmail.com<br>
+[veroandreo.github.io/grass-gis-talks](https://veroandreo.github.io/grass-gis-talks)<br>
+With support of CONICET, FOSS4G and the GRASS GIS project
+:::

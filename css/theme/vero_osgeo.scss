@@ -1,0 +1,364 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap');
+
+// fonts
+$font-family-sans-serif: "Miriam Libre", "Sintony", sans-serif !default;
+
+// font sizes
+$presentation-heading-font-weight: 700 !default;
+$presentation-h1-font-size: 2.5em !default;
+$presentation-h2-font-size:	1.75em !default;
+$presentation-h3-font-size:	1.5em !default;
+$presentation-h4-font-size:	1.2em !default;
+$presentation-font-size-root: 30px !default;
+$presentation-font-smaller: 0.8em !default; 
+
+// colors
+$body-bg: #ffffff !default;
+$body-color: #131e29 !default;
+$text-muted: $body-color !default;
+$link-color: #2BA84A !default;
+$input-panel-bg: rgba(233, 236, 239, 0.2) !default;
+
+// headings
+$presentation-heading-font: 'Miriam Libre', sans-serif !default;
+$presentation-heading-color: #003A40 !default;
+
+$presentation-title-slide-text-align: center !default;
+$presentation-slide-text-align: left !default;
+
+// callouts
+$callout-color-tip: #003A40;
+
+/*-- scss:rules --*/
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+
+hr.top {
+	border-top: 3px solid black;
+  margin-left: 3em;
+  margin-right: 3em; }
+
+hr.mid {
+	border-top: 1px solid black;
+  margin-left: 3em;
+  margin-right: 3em; }
+
+hr.bottom {
+	border-top: 3px solid black;
+  margin-left: 3em;
+  margin-right: 3em; }
+
+body {
+  background: #FCFFFC;
+  background-color: #FCFFFC; }
+
+.reveal {
+  font-family: 'Miriam Libre', sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: #040F0F; /*#003A40*/
+}
+
+::selection {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.99);
+  text-shadow: none; }
+
+.reveal .slides > section, .reveal .slides > section > section {
+  line-height: 1em;
+  font-weight: inherit; }
+
+.container {
+    display: grid;
+    grid-auto-flow: column; }
+
+.column {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.reveal div.left {
+    float: left;
+    z-index: -10;
+    width: 65%;
+}
+
+.reveal div.right {
+    float: right;
+    z-index: -10;
+    width: 35%;
+}
+
+.container_flex {
+    display: flex;
+    grid-auto-flow: column;
+}
+
+.message-box-white {
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.750);
+  opacity: 93%;
+  padding: 15px 15px 15px 15px !important;
+  word-wrap: normal;
+}
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: 0.5em 0;
+  line-height: 1.2em; }
+
+.reveal p2 {
+  margin: 0.5em 0;
+  line-height: 1.3em;
+  font-size: .8em }
+
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img, .reveal video, .reveal iframe {
+  max-width: 95%;
+  max-height: 95%; }
+
+.reveal strong, .reveal b {
+  font-weight: bold;
+  color: #0C9347;
+}
+
+.reveal em {
+  font-style: italic; }
+
+.reveal ol, .reveal dl, .reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1.2em; }
+
+.reveal li {
+  padding: .3em 0.8em; }
+
+.reveal ol {
+  list-style-type: decimal; }
+
+.reveal ul {
+  list-style-type: disc; }
+
+.reveal ul ul {
+  list-style-type: square; }
+
+.reveal ul ul ul {
+  list-style-type: circle; }
+
+.reveal ul ul, .reveal ul ol, .reveal ol ol, .reveal ol ul {
+  display: block;
+  margin-left: 30px; }
+
+.reveal dt {
+  font-weight: bold; }
+
+.reveal dd {
+  margin-left: 40px; }
+
+.reveal q, .reveal blockquote {
+  quotes: none; }
+
+.reveal blockquote {
+  border-left: solid 10px #2BA84A80;
+  padding-left: 1em;
+  display: block;
+  font-style: italic;
+  position: relative;
+  width: 85%;
+  font-size: 0.85em;
+ }
+
+.reveal blockquote p:first-child, .reveal blockquote p:last-child {
+  display: inline-block; }
+
+.reveal q {
+  font-style: italic;
+  font-size: 0.85em;
+}
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: monospace;
+  line-height: 1em;
+  word-wrap: break-word;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
+
+.reveal code {
+  font-family: monospace;
+  padding: 0;
+}
+
+.reveal pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal;
+  background: #3F3F3F;
+  color: #DCDCDC; }
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.reveal table th {
+  font-weight: bold;
+  border-top: 2px solid;
+  border-bottom: 1px solid;}
+
+.reveal table th, .reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;}
+  /* border-bottom: 1px solid; }*/
+
+.reveal table tr:last-child td {
+  border-bottom: 2px solid; }
+
+.reveal sup {
+  vertical-align: super; }
+
+.reveal sub {
+  vertical-align: sub; }
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1em;
+  vertical-align: top; }
+
+.reveal small * {
+  vertical-align: top; }
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: #2BA84A; /*#003A40*/
+  text-decoration: none;
+  -webkit-transition: color 0.15s ease;
+  -moz-transition: color 0.15s ease;
+  transition: color 0.15s ease; }
+
+.reveal a.blue {
+  color: #728FCE;
+  text-decoration: none;
+  -webkit-transition: color 0.15s ease;
+  -moz-transition: color 0.15s ease;
+  transition: color 0.15s ease; }
+
+.reveal a:hover {
+  color: #2BA84A;
+  text-decoration: underline;
+  text-shadow: none;
+  border: none; }
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #00003f; }
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15); }
+
+.reveal a img {
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  transition: all 0.15s linear; }
+
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #00008B;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
+  border-right-color: #A0A0A0; } /*#00008B*/
+
+.reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled {
+  border-left-color: #A0A0A0; }
+
+.reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
+  border-bottom-color: #A0A0A0; }
+
+.reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled {
+  border-top-color: #A0A0A0; }
+
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: #CCCCCC; } /*#0000f1*/
+
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: #CCCCCC; }
+
+.reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: #CCCCCC; }
+
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: #CCCCCC; }
+
+.reveal .controls .navigate-left {
+    border-right-color: #A0A0A0; /*#003A40*/
+}
+
+.reveal .controls .navigate-right {
+    border-left-color: #A0A0A0;
+}
+
+.reveal .controls .navigate-down {
+    border-top-color: #A0A0A0;
+}
+
+.reveal .controls .navigate-up {
+    border-bottom-color: #A0A0A0;
+}
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2); }
+
+.reveal .progress span {
+  background: #ee4912; /*#003A40*/
+  -webkit-transition: width 900ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 900ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 900ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+/*********************************************
+ * SLIDE NUMBER
+ *********************************************/
+.reveal .slide-number {
+    color: #C8C7C8; /*#003A40*/
+    opacity: 1;
+    font-size: 0.8rem;
+}
+
+/*********************************************
+ * BIO
+ *********************************************/
+.bio-img {
+    width: 35%;
+    border-radius: 60%;
+    float: right;
+    padding-bottom: 2rem;
+}
